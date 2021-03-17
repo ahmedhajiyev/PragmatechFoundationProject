@@ -3,11 +3,11 @@ figure{
 }
 
 img{
-    
     object-fit: cover;
     height: 200px;
     width: 400px;
 }
+
 div{
     width: 400px;
     left: 400px;
