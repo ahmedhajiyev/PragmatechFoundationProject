@@ -2,16 +2,31 @@ figure{
     margin: 0;
 }
 
-div{
-    width: 330px;
+img{
     
+    object-fit: cover;
+    height: 200px;
+    width: 400px;
+}
+div{
+    width: 400px;
+    left: 400px;
+    margin: 0;
 }
 
 h1{
+    font-size: 35px;
+    text-align: center;
     margin: 0;
+    left: 50%;
 }
 
 p{
     margin: 0;
-    box-sizing: content-box;
+    font-size: 17px;
 }
+
+body{
+    padding-left: 35%;
+}
+
