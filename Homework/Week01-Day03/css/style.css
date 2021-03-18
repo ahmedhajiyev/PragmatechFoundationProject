@@ -24,9 +24,15 @@ h1{
 p{
     margin: 0;
     font-size: 17px;
+    margin-bottom: 15px;
 }
 
 body{
     padding-left: 35%;
 }
 
+.column{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
