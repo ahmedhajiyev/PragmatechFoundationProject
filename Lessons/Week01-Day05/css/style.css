@@ -1,0 +1,165 @@
+@import url(grid.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    height: 657px;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.fs{
+    font-size: 15px;
+    font-style: italic;
+}
+
+h2{
+    padding-top: 20px;
+}
+
+.brdr{
+    width: 280px;
+
+}
+
+div.container{
+    height: 657px;
+}
+
+.container .header{
+    display: flex;
+}
+
+
+.container .header .logo{
+    height: 60px;
+    box-sizing: border-box;
+}
+
+.container .header .logo img{
+    width: 380px;
+    padding: 20px;
+}
+
+.container .header .list ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 20px 300px 15px 200px;
+    cursor: pointer;
+    font-family: 'Dela Gothic One', cursive;
+
+}
+
+.container .header .list{
+    padding-left: auto;
+    padding-right: 0px;
+    height: 60px;
+}
+
+.container .menu{
+    display: flex;
+
+}
+
+.container .menu .content{
+    height: 270px;
+    font-size: 15px;
+    
+}
+
+.container .menu .content .menu1{
+    height: 270px;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    border: 1px solid gray;
+    border-bottom: none;
+    border-right: none;
+    cursor: pointer;
+}
+
+
+
+.container .menu .content img{
+    object-fit: cover;
+    height: 150px;
+    padding: 30px 10px;
+}
+
+
+.container .menu .content .menu2{
+    display: flex;
+    height: 270px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid gray;
+    border-right: none;
+    cursor: pointer;
+    
+}
+
+/*2ci hisse*/
+
+.container .menu .content2 img{
+    object-fit: cover;
+    height: 150px;
+    padding: 30px 10px;
+}
+
+
+.container .menu .content2 .menu3{
+    display: flex;
+    height: 270px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid gray;
+    border-bottom: none;
+    cursor: pointer;
+}
+
+.container .menu .content2 .menu4{
+    display: flex;
+    height: 270px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.container .menu .right img{
+    padding: 55px;
+    object-fit: cover;
+}
+
+.container .footer{
+    display: flex;
+    height: 90px;
+}
+
+.container .logo2 img{
+    object-fit: cover;
+    width: 200px;
+    padding: 20px;
+}
+
+.container .footer .social div{
+    display: inline-block;
+}
+
+.container .footer .social div a{
+    text-decoration: none;
+}
+
+.container .footer .social .instagram i{
+    color: gray;
+}
+
+.container .footer .contact{
+    text-align: center;
+}
