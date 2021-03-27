@@ -9,8 +9,6 @@
 .container .header{
     display: flex;
     height: 100px;
-    position: sticky;
-    top: -30px;
 }
 
 .container .header .logo{
@@ -47,15 +45,14 @@
 }
 
 .container .header .list ul li{
-    padding: 30px;
+    padding: 35px 30px;
 }
 
 .container .header .list ul li:hover{
     font-size: 25px;
     color: #283675FF;
     font-weight: 900;
-    padding: 20px;
-    
+    padding: 25px 20px;
 }
 
 
@@ -193,7 +190,7 @@
 }
 
 .container .content .menu .xc40 input:hover{
-    color: black;
+    color: #92AFC8FF;
     background-color: white;
     cursor: pointer;
 }
@@ -283,7 +280,7 @@
 }
 
 .container .content .menu .s60 input:hover{
-    color: black;
+    color: #224F60FF;
     background-color: white;
     cursor: pointer;
 }
