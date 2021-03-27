@@ -48,14 +48,14 @@
 }
 
 .container .header .list ul li{
-    padding: 35px;
+    padding: 30px;
 }
 
 .container .header .list ul li:hover{
     font-size: 25px;
     color: #283675FF;
     font-weight: 900;
-    padding: 30px;
+    padding: 20px;
     
 }
 
@@ -124,20 +124,6 @@
     background-color: white;
 }
 
-/*.container .content .menu .xc90 input{
-    padding: 5px 0px;
-    color: white;
-    border: white solid 0.2px;
-    width: 100px;
-    background: none;
-}
-
-.container .content .menu .xc90 div input:hover{
-    color: black;
-    background-color: white
-}*/
-
-
 .container .content .menu .xc60{
     width: 243px;
     padding: 50px;
@@ -163,7 +149,6 @@
     padding: 5px 20px;
     
 }
-
 
 .container .content .menu .xc60 input{
     padding: 5px 0px;
@@ -286,7 +271,6 @@
 
 .container .content .menu .s60 form{
     padding: 5px 20px;
-    
 }
 
 
@@ -296,6 +280,12 @@
     border: white solid 0.2px;
     width: 100px;
     background: none;
+}
+
+.container .content .menu .s60 input:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
 }
 
 .container .content .right{
@@ -314,7 +304,7 @@
 .container .content .right img:hover{
     width: 110%;
     padding: 0;
-    max-width: 230px;
+    max-width: 225px;
 }
 
 .container .footer{
