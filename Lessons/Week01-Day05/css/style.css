@@ -10,8 +10,7 @@
     display: flex;
     height: 100px;
     position: sticky;
-    top: 0px;
-    
+    top: -30px;
 }
 
 .container .header .logo{
@@ -195,7 +194,8 @@
 
 .container .content .menu .xc40 input:hover{
     color: black;
-    background-color: white
+    background-color: white;
+    cursor: pointer;
 }
 
 .container .content .menu h2.sedan{
@@ -236,7 +236,7 @@
     padding: 5px 20px;
 }
 
-.container .content .menu .s90 input{
+.container .content  .menu .s90 input{
     padding: 5px 0px;
     color: white;
     border: white solid 0.2px;
@@ -297,14 +297,13 @@
 .container .content .right img{
     object-fit: cover;
     width: 218px;
-    padding-left: 10px;
-    padding-top: 5px;
+    padding: 5px 5px 0px 5px;
 }
 
 .container .content .right img:hover{
     width: 110%;
     padding: 0;
-    max-width: 225px;
+    max-width: 218px;
 }
 
 .container .footer{
