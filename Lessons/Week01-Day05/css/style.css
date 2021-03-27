@@ -6,160 +6,357 @@
     box-sizing: border-box;
 }
 
-html,
-body{
-    height: 657px;
-    width: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.fs{
-    font-size: 15px;
-    font-style: italic;
-}
-
-h2{
-    padding-top: 20px;
-}
-
-.brdr{
-    width: 280px;
-
-}
-
-div.container{
-    height: 657px;
-}
-
 .container .header{
     display: flex;
+    height: 100px;
+    position: sticky;
+    top: 0px;
+    
 }
 
-
 .container .header .logo{
-    height: 60px;
-    box-sizing: border-box;
+    width: 337px;
+    min-width: 337px;
+    background-color: white;
 }
 
 .container .header .logo img{
-    width: 380px;
-    padding: 20px;
+    object-fit: cover;
+    width: 330px;
+    padding: 30px 20px;
+}
+
+.container .header .list{
+    width: 1012px;
+    min-width: 1012px;
+    background-color: #D5D3D2FF;
+}
+
+.container .header .list a{
+    text-decoration: none;
+    color: white;
 }
 
 .container .header .list ul{
     display: flex;
     list-style: none;
     justify-content: space-between;
-    padding: 20px 300px 15px 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+    padding: 35px;
     cursor: pointer;
-    font-family: 'Dela Gothic One', cursive;
-
 }
 
-.container .header .list{
-    padding-left: auto;
-    padding-right: 0px;
-    height: 60px;
-}
-
-.container .menu{
-    display: flex;
-
-}
-
-.container .menu .content{
-    height: 270px;
-    font-size: 15px;
+.container .header .list ul li:hover{
+    font-size: 25px;
+    color: #283675FF;
+    font-weight: 900;
     
 }
 
-.container .menu .content .menu1{
-    height: 270px;
-    width: 100%;
+
+.container .content{
     display: flex;
-    padding: 20px;
-    border: 1px solid gray;
-    border-bottom: none;
-    border-right: none;
-    cursor: pointer;
+    min-width: 1119px;
 }
 
-
-
-.container .menu .content img{
+.container .content .menu{
+    display: flex;
+    background-image: url(https://www.volvocars.com/images/v/en-to/v/-/media/project/contentplatform/data/media/campaigns/ultimate-safety-test/hero-image.jpg?iar=0&w=1366);
+    width: 1119px;
+    height: 586px;
     object-fit: cover;
-    height: 150px;
-    padding: 30px 10px;
 }
 
 
-.container .menu .content .menu2{
+.container .content .menu .fs{
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+}
+
+.container .content .menu .suv{
+    position: absolute;
+    display: inline-block;
+    color: white;
+    font-size: 35px;
+    padding-left: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container .content .menu .xc90{
+    width: 243px;
+    padding: 50px;
+}
+
+.container .content .menu .xc90 h2{
+    color: white;
+    font-weight: 1000;
+    text-align: center;
+    padding-left: 40px ;
+}
+
+.container .content .menu .xc90 .form{
     display: flex;
-    height: 270px;
-    width: 100%;
-    padding: 20px;
-    border: 1px solid gray;
-    border-right: none;
-    cursor: pointer;
+}
+
+.container .content .menu .xc90 p{
+    padding-left: 10px;
+    text-align: left;
+}
+
+.container .content .menu .xc90 form{
+    padding: 5px 20px;
+
+}
+
+
+.container .content .menu .xc90 input{
+    padding: 5px 0px;
+    color: white;
+    border: white solid 0.2px;
+    width: 100px;
+    background: none;
+}
+
+.container .content .menu .xc60{
+    width: 243px;
+    padding: 50px;
+}
+
+.container .content .menu .xc60 h2{
+    color: white;
+    font-weight: 1000;
+    text-align: center;
+    padding-left: 40px ;
+}
+
+.container .content .menu .xc60 .form{
+    display: flex;
+}
+
+.container .content .menu .xc60 p{
+    padding-left: 10px;
+    text-align: left;
+}
+
+.container .content .menu .xc60 form{
+    padding: 5px 20px;
+
+}
+
+
+.container .content .menu .xc60 input{
+    padding: 5px 0px;
+    color: white;
+    border: white solid 0.2px;
+    width: 100px;
+    background: none;
+}
+
+.container .content .menu .xc40{
+    width: 243px;
+    padding: 50px;
+}
+
+.container .content .menu .xc40 h2{
+    color: white;
+    font-weight: 1000;
+    text-align: center;
+    padding-left: 40px ;
+}
+
+.container .content .menu .xc40 .form{
+    display: flex;
+}
+
+.container .content .menu .xc40 p{
+    padding-left: 10px;
+    text-align: left;
+}
+
+.container .content .menu .xc40 form{
+    padding: 5px 20px;
+
+}
+
+
+.container .content .menu .xc40 input{
+    padding: 5px 0px;
+    color: white;
+    border: white solid 0.2px;
+    width: 100px;
+    background: none;
+}
+
+.container .content .menu h2.sedan{
+    position: absolute;
+    display: inline-block;
+    color: white;
+    font-size: 35px;
+    padding-left: 10px;
+    padding-top: 280px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.container .content .menu .s90{
+    position: absolute;
+    width: 243px;
+    padding: 50px;
+    padding-top: 320px;
     
 }
 
-/*2ci hisse*/
-
-.container .menu .content2 img{
-    object-fit: cover;
-    height: 150px;
-    padding: 30px 10px;
+.container .content .menu .s90 h2{
+    color: white;
+    font-weight: 1000;
+    text-align: center;
+    padding-left: 40px ;
 }
 
-
-.container .menu .content2 .menu3{
+.container .content .menu .s90 .form{
     display: flex;
-    height: 270px;
-    width: 100%;
-    padding: 20px;
-    border: 1px solid gray;
-    border-bottom: none;
-    cursor: pointer;
 }
 
-.container .menu .content2 .menu4{
+.container .content .menu .s90 p{
+    padding-left: 10px;
+    text-align: left;
+}
+
+.container .content .menu .s90 form{
+    padding: 5px 20px;
+
+}
+
+
+.container .content .menu .s90 input{
+    padding: 5px 0px;
+    color: white;
+    border: white solid 0.2px;
+    width: 100px;
+    background: none;
+}
+
+.container .content .menu .s60{
+    position: absolute;
+    width: 480px;
+    padding: 50px;
+    padding-top: 320px;
+    padding-left: 290px;
+}
+
+width: 110%;
+}
+
+.container .content .menu .s60 h2{
+    color: white;
+    font-weight: 1000;
+    text-align: center;
+    padding-left: 40px ;
+}
+
+.container .content .menu .s60 .form{
     display: flex;
-    height: 270px;
-    width: 100%;
-    padding: 20px;
-    border: 1px solid gray;
-    cursor: pointer;
 }
 
-.container .menu .right img{
-    padding: 55px;
+.container .content .menu .s60 p{
+    padding-left: 10px;
+    text-align: left;
+}
+
+.container .content .menu .s60 form{
+    padding: 5px 20px;
+    
+}
+
+
+.container .content .menu .s60 input{
+    padding: 5px 0px;
+    color: white;
+    border: white solid 0.2px;
+    width: 100px;
+    background: none;
+}
+
+.container .content .right{
+    width: 230px;
+    height: 586px;
+    background-color: #DADADAFF;
+}
+
+.container .content .right img{
     object-fit: cover;
+    width: 218px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.container .content .right img:hover{
+    width: 110%;
+    padding: 0;
+    max-width: 230px;
 }
 
 .container .footer{
     display: flex;
-    height: 90px;
+    height: 200px;
+    background-color: #161618FF;
+    width: 1349px;
 }
 
-.container .logo2 img{
-    object-fit: cover;
-    width: 200px;
-    padding: 20px;
-}
-
-.container .footer .social div{
-    display: inline-block;
-}
-
-.container .footer .social div a{
-    text-decoration: none;
-}
-
-.container .footer .social .instagram i{
-    color: gray;
+.container .footer .logo2 img{
+    width: 150px;
+    padding-top: 20px;
+    padding-left: 10px;
 }
 
 .container .footer .contact{
-    text-align: center;
+    padding: 60px 0px 0px 0px;
+    color: white;
+    font-size: 15px;
+}
+
+.container .footer .contact a{
+    text-decoration: none;
+    color: blanchedalmond;
+
+}
+
+.container .footer .testdrive {
+    color: white;
+    font-size: 20px;
+    padding: 30px 0px 0px 0px;
+}
+
+.container .footer .testdrive input{
+    border: white hidden 0.2px;
+    color: white;
+    background: none;
+}
+
+.container .footer .testdrive input[type="submit"]{
+    border: solid #757575FF 0.2px;
+    padding: 5px 15px;
+}
+
+.container .footer .testdrive input[type="submit"]:hover{
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.container .footer .testdrive form{
+    padding: 5px;
+}
+
+.container .footer .social a{
+    text-decoration: none;
+    color: white;
+    width: 1000px;
+}
+
+.container .footer .social i{
+    padding: 10px;
+    padding-top: 60px;
 }
