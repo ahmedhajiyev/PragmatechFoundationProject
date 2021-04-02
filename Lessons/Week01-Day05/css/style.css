@@ -1,40 +1,40 @@
 @import url(grid.css);
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.container .header{
+.container .header {
     display: flex;
     height: 80px;
 }
 
-.container .header .logo{
+.container .header .logo {
     width: 337px;
     min-width: 337px;
     background-color: white;
 }
 
-.container .header .logo img{
+.container .header .logo img {
     object-fit: cover;
     width: 330px;
     padding: 15px 20px;
 }
 
-.container .header .list{
+.container .header .list {
     width: 100%;
     min-width: 1012px;
-    background-color:#DADADAFF ;/* #D5D3D2FF*/
+    background-color: /*#DADADAFF*/
+    #D5D3D2FF;
 }
 
-.container .header .list a{
+.container .header .list a {
     text-decoration: none;
     color: white;
 }
 
-.container .header .list ul{
+.container .header .list ul {
     display: flex;
     list-style: none;
     justify-content: space-between;
@@ -46,25 +46,24 @@
     padding-left: 30px;
 }
 
-.container .header .list ul li{
+.container .header .list ul li {
     padding: 27px 30px;
 }
 
-.container .header .list ul li:hover{
+.container .header .list ul li:hover {
     font-size: 20px;
     color: #283675FF;
     font-weight: 900;
     padding: 22px 20px;
 }
 
-
-.container .content{
+.container .content {
     display: flex;
     width: 100%;
     min-width: 1119px;
 }
 
-.container .content .menu{
+.container .content .menu {
     display: flex;
     background-image: url(https://www.volvocars.com/images/v/en-to/v/-/media/project/contentplatform/data/media/campaigns/ultimate-safety-test/hero-image.jpg?iar=0&w=1366);
     min-width: 1119px;
@@ -73,14 +72,13 @@
     object-fit: cover;
 }
 
-
-.container .content .menu .fs{
+.container .content .menu .fs {
     color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 300;
 }
 
-.container .content .menu .suv{
+.container .content .menu .suv {
     position: absolute;
     display: inline-block;
     color: white;
@@ -89,66 +87,65 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.container .content .menu .xc90{
+.container .content .menu .xc90 {
     width: 243px;
     padding: 50px;
 }
 
-
-.container .content .menu .xc90 h2{
+.container .content .menu .xc90 h2 {
     color: white;
     font-weight: 1000;
     text-align: center;
-    padding-left: 40px ;
+    padding-left: 40px;
 }
 
-.container .content .menu .xc90 p{
+.container .content .menu .xc90 p {
     padding-left: 10px;
     text-align: left;
 }
 
-.container .content .menu .xc90 form{
+.container .content .menu .xc90 form {
     padding: 5px 20px;
 }
 
-.container .content .menu .xc90 input{
+.container .content .menu .xc90 input {
     padding: 5px 0px;
     color: white;
     border: white solid 0.2px;
     width: 100px;
     background: none;
 }
-.container .content .menu .xc90 input:hover{
+
+.container .content .menu .xc90 input:hover {
     background-color: white;
 }
 
-.container .content .menu .xc60{
+.container .content .menu .xc60 {
     width: 243px;
     padding: 50px;
 }
 
-.container .content .menu .xc60 h2{
+.container .content .menu .xc60 h2 {
     color: white;
     font-weight: 1000;
     text-align: center;
-    padding-left: 40px ;
+    padding-left: 40px;
 }
 
-.container .content .menu .xc60 .form{
+.container .content .menu .xc60 .form {
     display: flex;
 }
 
-.container .content .menu .xc60 p{
+.container .content .menu .xc60 p {
     padding-left: 10px;
     text-align: left;
 }
 
-.container .content .menu .xc60 form{
+.container .content .menu .xc60 form {
     padding: 5px 20px;
-    
 }
 
-.container .content .menu .xc60 input{
+.container .content .menu .xc60 input {
     padding: 5px 0px;
     color: white;
     border: white solid 0.2px;
@@ -156,34 +153,32 @@
     background: none;
 }
 
-.container .content .menu .xc40{
+.container .content .menu .xc40 {
     width: 243px;
     padding: 50px;
 }
 
-.container .content .menu .xc40 h2{
+.container .content .menu .xc40 h2 {
     color: white;
     font-weight: 1000;
     text-align: center;
-    padding-left: 40px ;
+    padding-left: 40px;
 }
 
-.container .content .menu .xc40 .form{
+.container .content .menu .xc40 .form {
     display: flex;
 }
 
-.container .content .menu .xc40 p{
+.container .content .menu .xc40 p {
     padding-left: 10px;
     text-align: left;
 }
 
-.container .content .menu .xc40 form{
+.container .content .menu .xc40 form {
     padding: 5px 20px;
-    
 }
 
-
-.container .content .menu .xc40 input{
+.container .content .menu .xc40 input {
     padding: 5px 0px;
     color: white;
     border: white solid 0.2px;
@@ -191,13 +186,13 @@
     background: none;
 }
 
-.container .content .menu .xc40 input:hover{
+.container .content .menu .xc40 input:hover {
     color: #92AFC8FF;
     background-color: white;
     cursor: pointer;
 }
 
-.container .content .menu h2.sedan{
+.container .content .menu h2.sedan {
     position: absolute;
     display: inline-block;
     color: white;
@@ -205,37 +200,36 @@
     padding-left: 10px;
     padding-top: 280px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
 }
 
-.container .content .menu .s90{
+.container .content .menu .s90 {
     position: absolute;
     width: 243px;
     padding: 50px;
     padding-top: 320px;
 }
 
-.container .content .menu .s90 h2{
+.container .content .menu .s90 h2 {
     color: white;
     font-weight: 1000;
     text-align: center;
-    padding-left: 40px ;
+    padding-left: 40px;
 }
 
-.container .content .menu .s90 .form{
+.container .content .menu .s90 .form {
     display: flex;
 }
 
-.container .content .menu .s90 p{
+.container .content .menu .s90 p {
     padding-left: 10px;
     text-align: left;
 }
 
-.container .content .menu .s90 form{
+.container .content .menu .s90 form {
     padding: 5px 20px;
 }
 
-.container .content  .menu .s90 input{
+.container .content .menu .s90 input {
     padding: 5px 0px;
     color: white;
     border: white solid 0.2px;
@@ -243,7 +237,7 @@
     background: none;
 }
 
-.container .content .menu .s60{
+.container .content .menu .s60 {
     position: absolute;
     width: 480px;
     padding: 50px;
@@ -251,29 +245,27 @@
     padding-left: 290px;
 }
 
-
-.container .content .menu .s60 h2{
+.container .content .menu .s60 h2 {
     color: white;
     font-weight: 1000;
     text-align: center;
-    padding-left: 40px ;
+    padding-left: 40px;
 }
 
-.container .content .menu .s60 .form{
+.container .content .menu .s60 .form {
     display: flex;
 }
 
-.container .content .menu .s60 p{
+.container .content .menu .s60 p {
     padding-left: 10px;
     text-align: left;
 }
 
-.container .content .menu .s60 form{
+.container .content .menu .s60 form {
     padding: 5px 20px;
 }
 
-
-.container .content .menu .s60 input{
+.container .content .menu .s60 input {
     padding: 5px 0px;
     color: white;
     border: white solid 0.2px;
@@ -281,31 +273,31 @@
     background: none;
 }
 
-.container .content .menu .s60 input:hover{
+.container .content .menu .s60 input:hover {
     color: #224F60FF;
     background-color: white;
     cursor: pointer;
 }
 
-.container .content .right{
+.container .content .right {
     width: 230px;
     height: 586px;
     background-color: #DADADAFF;
 }
 
-.container .content .right img{
+.container .content .right img {
     object-fit: cover;
     width: 218px;
     padding: 5px 5px 0px 5px;
 }
 
-.container .content .right img:hover{
+.container .content .right img:hover {
     width: 110%;
     padding: 0;
     max-width: 218px;
 }
 
-.container .footer{
+.container .footer {
     display: flex;
     height: 200px;
     background-color: #161618FF;
@@ -313,22 +305,21 @@
     min-width: 1349px;
 }
 
-.container .footer .logo2 img{
+.container .footer .logo2 img {
     width: 150px;
     padding-top: 20px;
     padding-left: 10px;
 }
 
-.container .footer .contact{
+.container .footer .contact {
     padding: 60px 0px 0px 0px;
     color: white;
     font-size: 15px;
 }
 
-.container .footer .contact a{
+.container .footer .contact a {
     text-decoration: none;
     color: blanchedalmond;
-
 }
 
 .container .footer .testdrive {
@@ -337,32 +328,32 @@
     padding: 30px 0px 0px 0px;
 }
 
-.container .footer .testdrive input{
+.container .footer .testdrive input {
     border: white hidden 0.2px;
     color: white;
     background: none;
 }
 
-.container .footer .testdrive input[type="submit"]{
+.container .footer .testdrive input[type="submit"] {
     border: solid #757575FF 0.2px;
     padding: 5px 15px;
 }
 
-.container .footer .testdrive input[type="submit"]:hover{
+.container .footer .testdrive input[type="submit"]:hover {
     font-size: 15px;
     cursor: pointer;
 }
 
-.container .footer .testdrive form{
+.container .footer .testdrive form {
     padding: 5px;
 }
 
-.container .footer .social a{
+.container .footer .social a {
     text-decoration: none;
     color: white;
     width: 1000px;
 }
 
-.container .footer .social i{
+.container .footer .social i {
     padding: 100px 0px 0px 30px;
 }
