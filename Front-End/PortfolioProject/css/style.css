@@ -1,168 +1,291 @@
-@import url(grid.css);
-* {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: transparent;
-}
-
-body {
-    background-color: black;
-    color: white;
-}
-
-a {
-    text-decoration: none;
-    color: #fff;
-}
-
-header {
-    padding: 0.5rem 1rem;
-}
-
-.header {
-    display: flex;
-    justify-content: center;
-    margin: 0 9%;
-    width: 82%;
-    height: 66px;
-}
-
-.header .header-nav {
-    display: flex;
-}
-
-.header .header-nav .header-logo {
-    width: 10%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    margin: 0 0 0 0;
-}
-
-.header .header-nav .header-logo a {
-    padding-top: .7rem;
-    padding-bottom: .7rem;
-    margin: 0 16px 0 0;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 43.2px;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-.header .header-nav .header-list {
-    display: inline-block;
-    width: 90%;
-    min-width: 1011px;
-    height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-size: 16px;
-    font-weight: 200;
-    line-height: 28.8px;
-}
-
-.header .header-nav .header-list ul {
-    display: flex;
-    list-style: none;
-}
-
-.header .header-nav .header-list li {
-    font-size: 16px;
-    padding-top: 1rem;
-    padding-bottom: 0.7rem;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.header .header-nav .header-list li:hover {}
-
-.header .header-nav .header-list li:active {
-    color: #ffbd39;
-}
-
-.underline {
-    position: absolute;
-    display: block;
-    padding-bottom: 2px;
-    width: 50px;
-    height: 2px;
-    background-color: #ffbd39;
-    left: 50px;
-}
-
-
-/*Main*/
-
-.main-hello {
-    width: 82%;
-    height: 750px;
-    margin: 0 9%;
-    display: flex;
-    justify-content: center;
-}
-
-.main-hello .main-text {
-    height: 352px;
-    width: 650px;
-    padding: 0 48px 0 45px;
-    position: relative;
-    top: 130px;
-}
-
-.main-hello .main-text .main-text-hello {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 25.2px;
-    color: rgb(255, 189, 57);
-    letter-spacing: 4px;
-    display: block;
-}
-
-.main-hello .main-text .main-text-about {
-    width: 507px;
-    height: 216px;
-    padding: 16px 0 24px;
-    font-size: 60px;
-    font-weight: 800;
-    line-height: 72px;
-    color: rgb(255, 255, 255);
-}
-
-.main-hello .different {
-    color: rgb(255, 189, 57);
-}
-
-.main-hello .button {
-    margin-top: 54px;
-}
-
-.main-hello .button a {
-    text-transform: uppercase;
-    padding: 16px 24px;
-    border: 1px solid;
-    border-radius: 100px;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 18px;
-    outline: cadetblue;
-    letter-spacing: 2px;
-}
-
-.main-hello .button .hire-me {
-    background-color: rgb(255, 189, 57);
-    color: rgb(0, 0, 0);
-}
-
-.main-hello img {
-    object-fit: cover;
-    height: 100%;
-    width: 35%;
-    left: 0;
-}
-
-
-/**/
+    @import url(grid.css);
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: transparent;
+    }
+    
+    body {
+        background-color: black;
+        color: white;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    header {
+        padding: 0.5rem 1rem;
+    }
+    
+    .header {
+        display: flex;
+        justify-content: center;
+        margin: 0 9%;
+        width: 82%;
+        height: 66px;
+    }
+    
+    .header .header-nav {
+        display: flex;
+    }
+    
+    .header .header-nav .header-logo {
+        width: 10%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 0 0 0;
+    }
+    
+    .header .header-nav .header-logo a {
+        padding-top: .7rem;
+        padding-bottom: .7rem;
+        margin: 0 16px 0 0;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 43.2px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    
+    .header .header-nav .header-list {
+        display: inline-block;
+        width: 90%;
+        min-width: 1011px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 16px;
+        font-weight: 200;
+        line-height: 28.8px;
+    }
+    
+    .header .header-nav .header-list ul {
+        display: flex;
+        list-style: none;
+    }
+    
+    .header .header-nav .header-list li {
+        font-size: 16px;
+        padding-top: 1rem;
+        padding-bottom: 0.7rem;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .header .header-nav .header-list li:hover {}
+    
+    .header .header-nav .header-list li:active {
+        color: #ffbd39;
+    }
+    
+    .underline {
+        position: absolute;
+        display: block;
+        padding-bottom: 2px;
+        width: 50px;
+        height: 2px;
+        background-color: #ffbd39;
+        left: 50px;
+    }
+    /*Main*/
+    
+    .main-hello {
+        width: 82%;
+        height: 750px;
+        margin: 0 9%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .main-hello .main-text {
+        height: 352px;
+        width: 650px;
+        padding: 0 48px 0 45px;
+        position: relative;
+        top: 130px;
+    }
+    
+    .main-hello .main-text .main-text-hello {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 25.2px;
+        color: rgb(255, 189, 57);
+        letter-spacing: 4px;
+        display: block;
+    }
+    
+    .main-hello .main-text .main-text-about {
+        width: 507px;
+        height: 216px;
+        padding: 16px 0 24px;
+        font-size: 60px;
+        font-weight: 800;
+        line-height: 72px;
+        color: rgb(255, 255, 255);
+    }
+    
+    .main-hello .different {
+        color: rgb(255, 189, 57);
+    }
+    
+    .main-hello .button {
+        margin-top: 54px;
+    }
+    
+    .main-hello .button a {
+        text-transform: uppercase;
+        padding: 16px 24px;
+        border: 1px solid;
+        border-radius: 100px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 18px;
+        outline: cadetblue;
+        letter-spacing: 2px;
+    }
+    
+    .main-hello .button .hire-me {
+        background-color: rgb(255, 189, 57);
+        color: rgb(0, 0, 0);
+    }
+    
+    .main-hello img {
+        object-fit: cover;
+        height: 100%;
+        width: 45%;
+        left: 0;
+    }
+    /*About*/
+    
+    .about {
+        width: 100%;
+        height: 743px;
+        padding: 112px 0px 0px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .about .about-img {
+        height: 631px;
+        width: 445px;
+        padding: 0 15px;
+    }
+    
+    .about .about-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .about .about-me {
+        height: 631px;
+        width: 665px;
+        padding: 0 15px 48px 48px;
+    }
+    
+    .about .about-me .about-me-list {
+        position: relative;
+        width: 632px;
+        height: 423px;
+        padding: 0 15px 16px 15px;
+    }
+    
+    .about .about-me .about-me-list h1 {
+        position: absolute;
+        top: 0;
+        left: 25px;
+        font-size: 134.4px;
+        color: rgba(255, 255, 255, 0.1);
+        z-index: -1;
+        font-weight: 900;
+        line-height: 201.6px;
+        margin: 0 0 8px;
+    }
+    
+    .about .about-me .about-me-list h2 {
+        margin: 0 0 24px;
+        position: absolute;
+        top: 0;
+        left: 45px;
+        font-size: 50px;
+        font-weight: 700;
+    }
+    
+    .about .about-me .about-me-list p {
+        position: relative;
+        top: 105px;
+        left: 25px;
+        margin: 0 0 16px;
+        font-size: 16px;
+        line-height: 1.8;
+        font-weight: 400;
+        color: #999999;
+    }
+    
+    .about .about-me .about-me-list ul {
+        margin-top: 40px;
+        position: relative;
+        top: 110px;
+    }
+    
+    .about .about-me .about-me-list ul li {
+        margin-bottom: 10px;
+        display: flex;
+        text-align: left;
+    }
+    
+    .about .about-me .about-me-list .first {
+        font-weight: 600;
+        color: #fff;
+        width: 130px;
+    }
+    
+    .about .about-me .about-me-list .second {
+        width: calc(100% - 130px);
+        font-size: 16px;
+        line-height: 1.8;
+        font-weight: 400;
+        color: #999999;
+    }
+    
+    .about .about-me .projectAndDownload .text {
+        display: flex;
+        margin: 0 0 24px;
+        position: relative;
+        top: 60px;
+        left: 55px;
+    }
+    
+    .about .about-me .projectAndDownload .text span {
+        font-weight: 400;
+        color: #fff;
+        font-size: 20px;
+    }
+    
+    .about .about-me .projectAndDownload .text .number {
+        padding-right: 6px;
+        font-weight: 600;
+        color: #ffbd39;
+    }
+    
+    .about .about-me .projectAndDownload a {
+        position: relative;
+        top: 78px;
+        left: 55px;
+        background: #ffbd39;
+        border: 1px solid #ffbd39;
+        color: #000000;
+        padding: 16px;
+        border-radius: 100px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
