@@ -289,3 +289,205 @@
         letter-spacing: 2px;
         font-weight: 600;
     }
+    /*Resume*/
+    
+    .resume {
+        width: 100%;
+        height: 1552px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .resume .resume-content {
+        max-width: 1140px;
+        width: 100%;
+        padding: 0 15px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 140px;
+    }
+    
+    .resume .resume-content .resume-content-text {
+        width: 1140px;
+        height: 219px;
+        padding: 0 0 48px;
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .resume .resume-content .resume-content-text h1 {
+        position: absolute;
+        top: 0;
+        font-size: 134.4px;
+        color: rgba(255, 255, 255, 0.1);
+        z-index: -1;
+        font-weight: 900;
+        line-height: 201.6px;
+        margin: 0 0 8px;
+    }
+    
+    .resume .resume-content .resume-content-text h2 {
+        margin: 0 0 24px;
+        position: absolute;
+        top: 0;
+        font-size: 50px;
+        font-weight: 700;
+    }
+    
+    .resume .resume-content .resume-content-text p {
+        position: relative;
+        top: 95px;
+        left: 25px;
+        margin: 0 0 16px;
+        font-size: 16px;
+        line-height: 1.8;
+        font-weight: 400;
+        color: #999999;
+    }
+    /*Left Row*/
+    
+    .resume .resume-content .resume-content-left {
+        width: 570px;
+        height: 1089px;
+        padding: 0 15px;
+        position: absolute;
+        top: 219px;
+        left: 0;
+    }
+    
+    .resume .resume-content .resume-content-left div {
+        width: 540px;
+        height: 333px;
+        margin: 0 0 30px;
+        padding: 30px;
+        background-color: #1A1A1AFF;
+        border-radius: 5px;
+    }
+    
+    .resume .resume-content .resume-content-left .date {
+        font-weight: 900;
+        font-size: 26px;
+        color: #ffbd39;
+    }
+    
+    .resume .resume-content .resume-content-left h2 {
+        font-size: 26px;
+        line-height: 1.5;
+        color: white;
+        font-weight: 400;
+        margin: 0 0 8px;
+    }
+    
+    .resume .resume-content .resume-content-left .company {
+        color: #999999;
+        line-height: 1.8;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+    
+    .resume .resume-content .resume-content-left p {
+        margin: 24px 0 16px;
+        font-size: 16px;
+        line-height: 1.8;
+        font-weight: 400;
+        color: #999999;
+    }
+    
+    .resume .resume-content .resume-content-right {
+        position: absolute;
+        top: 219px;
+        right: 0;
+        width: 570px;
+        height: 1089px;
+        padding: 0 15px;
+    }
+    /*Right Row*/
+    
+    .resume .resume-content .resume-content-right div {
+        width: 540px;
+        height: 333px;
+        margin: 0 0 30px;
+        padding: 30px;
+        background-color: #1A1A1AFF;
+        border-radius: 5px;
+    }
+    
+    .resume .resume-content .resume-content-right .date {
+        font-weight: 900;
+        font-size: 26px;
+        color: #ffbd39;
+    }
+    
+    .resume .resume-content .resume-content-right h2 {
+        font-size: 26px;
+        line-height: 1.5;
+        color: white;
+        font-weight: 400;
+        margin: 0 0 8px;
+    }
+    
+    .resume .resume-content .resume-content-right .company {
+        color: #999999;
+        line-height: 1.8;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+    
+    .resume .resume-content .resume-content-right p {
+        margin: 24px 0 16px;
+        font-size: 16px;
+        line-height: 1.8;
+        font-weight: 400;
+        color: #999999;
+    }
+    
+    .resume .resume-content .resume-content-button {
+        width: 1140px;
+        height: 84px;
+        margin: 48px -15px 0;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 130px;
+    }
+    
+    .resume .resume-content .resume-content-button a {
+        top: 78px;
+        background: #ffbd39;
+        border: 1px solid #ffbd39;
+        color: #000000;
+        left: 55px;
+        padding: 16px;
+        border-radius: 100px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+        display: inline-block;
+        width: 212px;
+        height: 68px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*  position: absolute;
+        top: 78px;
+        background: #ffbd39;
+        border: 1px solid #ffbd39;
+        color: #000000;
+        left: 55px;
+        padding: 16px;
+        border-radius: 100px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+        display: inline-block;*/
