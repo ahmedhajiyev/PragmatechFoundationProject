@@ -1372,3 +1372,91 @@ header {
     border: 1px #ffbd39 solid;
     left: 28%;
 }
+
+
+/*Footer*/
+
+.footer {
+    width: 100%;
+    height: 678px;
+    padding: 112px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.footer .footer-container {
+    width: 1140px;
+    height: 454px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .footer-container div {
+    width: 285px;
+    height: 365px;
+    padding: 0 15px;
+}
+
+.footer .footer-container h2 {
+    color: #fff;
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.footer .footer-container p {
+    font-size: 16px;
+    line-height: 28.8px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .7);
+}
+
+.footer .footer-container ul li {
+    list-style: none;
+    padding: 5px 0;
+}
+
+.footer .footer-container a,
+li {
+    font-size: 16px;
+    line-height: 28.8px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .7);
+}
+
+.footer .footer-container .row1 .social {
+    display: flex;
+    position: relative;
+    top: 65px;
+    width: 285px;
+}
+
+.footer .footer-container .row1 .social a {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: #1A1A1AFF;
+}
+
+.footer .footer-container .row1 .social .twitter {
+    position: absolute;
+    left: 0;
+}
+
+.footer .footer-container .row1 .social .facebook {
+    position: absolute;
+    left: 23%;
+}
+
+.footer .footer-container .row1 .social .instagram {
+    position: absolute;
+    left: 46%;
+}
+
+.footer span {
+    position: absolute;
+    bottom: 10px;
+}
