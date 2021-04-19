@@ -1064,6 +1064,13 @@ header {
 
 .blog .blog-container .blog-container-content a {
     position: relative;
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.blog .blog-container .blog-container-content .text {
+    position: relative;
     top: 50px;
     font-size: 20px;
     margin-bottom: 16px;
