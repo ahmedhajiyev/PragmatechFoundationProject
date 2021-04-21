@@ -97,6 +97,10 @@ header {
 
 /*Main*/
 
+.slider {
+    display: block;
+}
+
 .main-hello {
     width: 82%;
     height: 750px;
