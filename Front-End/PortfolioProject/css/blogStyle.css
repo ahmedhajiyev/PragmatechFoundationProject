@@ -97,14 +97,15 @@ p {
     margin: 48px 0 16px;
 }
 
-.single-blog-main .single-blog-main-container .row1 .tag {
+.tag {
     width: 730px;
     height: 37px;
     margin: 50px 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
-.single-blog-main .single-blog-main-container .row1 .tag a {
+.tag a {
     text-transform: uppercase;
     display: inline-block;
     padding: 5px 10px 4px;
@@ -116,7 +117,7 @@ p {
     font-size: 11px;
 }
 
-.single-blog-main .single-blog-main-container .row1 .tag a:hover {
+.tag a:hover {
     border: 0.5px solid transparent;
 }
 
@@ -327,7 +328,7 @@ textarea {
     margin-bottom: 30px;
 }
 
-.categories h3 {
+.row2 h3 {
     font-size: 20px !important;
     font-weight: 600;
     margin-bottom: 20px;
@@ -349,4 +350,85 @@ textarea {
 
 .categories a:hover {
     color: #ffbd39;
+}
+
+.recent-blog {
+    height: 622px;
+    width: 100%;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.recent-blog>div {
+    height: 150px;
+    width: 300px;
+    display: flex;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.recent-blog div .image {
+    width: 80px;
+    height: 80px;
+    margin-right: 24px;
+}
+
+.recent-blog div img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 0px !important;
+}
+
+.recent-blog .heading {
+    font-size: 18px !important;
+    font-weight: 300;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.recent-blog .heading a:hover {
+    color: #ffbd39;
+}
+
+.recent-blog .date {
+    height: 54px;
+    width: 198px;
+    position: absolute;
+    bottom: 0px;
+    left: 105px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recent-blog .date a {
+    color: #4d4d4d;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-right: 25px;
+}
+
+.tag-cloud {
+    height: 211px;
+    width: 100%;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.tag-cloud .tag {
+    width: 100%;
+}
+
+.paragraph {
+    height: 305px;
+    width: 100%;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.paragraph p {
+    font-size: 15px !important;
 }
