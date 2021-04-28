@@ -10,20 +10,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <script src="/js/jquery.js"></script>
+
 </head>
 
 <body>
     <header>
-        <div class="header">
-            <div class="header-nav">
-                <div class="header-logo">
-                    <a href="#index.html">Clark</a>
-                </div>
-                <div class="header-list">
-                    <ul>
-                        <a href="">
-                            <li>Home</li>
-                            <span class="underlineHeader"> 
+        <div class="head">
+            <div class="header">
+                <div class="header-nav">
+                    <div class="header-logo">
+                        <a href="#index.html">Clark</a>
+                    </div>
+                    <div class="header-list">
+                        <ul>
+                            <a href="">
+                                <li>Home</li>
+                                <span class="underlineHeader"> 
                         </a>
                         <a href="#about">
                             <li>About</li>
@@ -58,6 +61,7 @@
                     
                         
                     </span>
+                    </div>
                 </div>
             </div>
     </header>
@@ -205,6 +209,7 @@
                 </div>
                 <div class="services-content-row">
                     <div class="row1">
+
                         <a href="">
                             <span class="icon">
                                 <i class="fas fa-chart-line fa-3x"></i>
@@ -333,7 +338,7 @@
                 <div class="projects-container-content">
                     <div class="projects-container-content1 col-4">
                         <div class="row1">
-                            <div class="index1">
+                            <div onmouseover="myFunction()" class="index1">
                                 <h3>
                                     <a href=""> Branding & Illustration Design</a></h3>
                                 <span class="indexSpan">Web Design</span>
@@ -386,7 +391,7 @@
                             <div class="blog-container-span">
                                 <span class="date">June 21, 2019</span>
                                 <span>Admin</span>
-                                <span>3</span>
+                                <span><i class="fas fa-comment-alt "></i>3</span>
                             </div>
                     </a>
                     <a href="" class="text"> Why Lead Generation is Key for Business Growth</a>
@@ -401,7 +406,7 @@
                             <div class="blog-container-span">
                                 <span class="date">June 21, 2019</span>
                                 <span>Admin</span>
-                                <span>3</span>
+                                <span><i class="fas fa-comment-alt "></i>3</span>
                             </div>
                             <a href="" class="text"> Why Lead Generation is Key for Business Growth</a>
                             <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
@@ -415,7 +420,7 @@
                             <div class="blog-container-span">
                                 <span class="date">June 21, 2019</span>
                                 <span>Admin</span>
-                                <span>3</span>
+                                <span><i class="fas fa-comment-alt "></i>3</span>
                             </div>
                             <a href="" class="text"> Why Lead Generation is Key for Business Growth</a>
                             <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
@@ -462,6 +467,8 @@
             </div>
 
         </div>
+
+        <!--CONTACT-->
         <div class="contact" id="contact">
             <div class="contact-container">
                 <div class="contact-container-text">
@@ -473,22 +480,22 @@
                 </div>
                 <div class="contact-container-rows">
                     <div class="row1">
-                        <span class="circle"></span>
+                        <span class="circle"><i class="fas fa-map-signs fa-2x"></i></span>
                         <h3>Address</h3>
                         <p>198 West 21th Street, Suite 721 New York NY 10016</p>
                     </div>
                     <div class="row2">
-                        <span class="circle"></span>
+                        <span class="circle"><i class="fas fa-phone-alt fa-2x"></i></span>
                         <h3>Contact Number</h3>
                         <a href="">+ 1235 2355 98</a>
                     </div>
                     <div class="row3">
-                        <span class="circle"></span>
+                        <span class="circle"><i class="fab fa-telegram-plane fa-2x"></i></span>
                         <h3>Email Address</h3>
                         <a href="">info@yoursite.com</a>
                     </div>
                     <div class="row4">
-                        <span class="circle"></span>
+                        <span class="circle"><i class="fas fa-globe-americas fa-2x"></i></span>
                         <h3>WebSite</h3>
                         <a href="">yoursite.com</a>
                     </div>
@@ -533,10 +540,10 @@
                             <li><i class="fab fa-twitter "></i></li>
                         </a>
                         <a href="" class="facebook">
-                            <li><i class="fas fa-facebook "></i></li>
+                            <li><i class="fab fa-facebook-f "></i></li>
                         </a>
                         <a href="" class="instagram">
-                            <li></li>
+                            <li><i class="fab fa-instagram"></i></li>
                         </a>
 
                     </ul>
@@ -544,19 +551,25 @@
                 <div class="row2">
                     <h2>Links</h2>
                     <ul>
+
                         <a href="">
+                            <i class="fa fa-long-arrow-alt-right"></i>
                             <li> Home</li>
                         </a>
                         <a href="">
+                            <i class="fa fa-long-arrow-alt-right"></i>
                             <li>About</li>
                         </a>
                         <a href="">
+                            <i class="fa fa-long-arrow-alt-right"></i>
                             <li>Services</li>
                         </a>
                         <a href="">
+                            <i class="fa fa-long-arrow-alt-right"></i>
                             <li>Projects</li>
                         </a>
                         <a href="">
+                            <i class="fa fa-long-arrow-alt-right"></i>
                             <li>Contact</li>
                         </a>
                     </ul>
@@ -565,18 +578,23 @@
                     <h2>Services</h2>
                     <ul>
                         <a href="">
+                            <i class="fa fa-long-arrow-alt-right"></i>
                             <li>Web Design</li>
                         </a>
                         <a href="">
+                            <i class="fa fa-long-arrow-alt-right"></i>
                             <li>Web Development</li>
                         </a>
                         <a href="">
+                            <i class="fa fa-long-arrow-alt-right"></i>
                             <li>Business Strategy</li>
                         </a>
                         <a href="">
+                            <i class="fa fa-long-arrow-alt-right"></i>
                             <li>Data Analysis</li>
                         </a>
                         <a href="">
+                            <i class="fa fa-long-arrow-alt-right"></i>
                             <li>Graphic Design</li>
                         </a>
                     </ul>
@@ -584,13 +602,17 @@
                 <div class="row4">
                     <h2>Have a Questions?</h2>
                     <ul>
-
-                        <li> 203 Fake St. Mountain View, San Francisco, California, USA</li>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <li> 203 Fake St. Mountain View, San Francisco, California, USA</li>
+                        </p>
                         <a href="">
+                            <i class="fas fa-phone-alt"></i>
                             <li>+2 392 3929 210
                             </li>
                         </a>
                         <a href="">
+                            <i class="fas fa-envelope"></i>
                             <li>info@yourdomain.com</li>
                         </a>
                     </ul>
@@ -599,6 +621,7 @@
             <span>Copyright ©2021 All rights reserved</span>
         </div>
     </footer>
+
 
     <script src="/js/script.js"></script>
 </body>

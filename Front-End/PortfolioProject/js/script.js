@@ -33,3 +33,19 @@ setInterval(() => {
     showSlides();
 
 }, 2000)
+
+
+
+//
+
+/*function myFunction() {
+    let i;
+    let index = document.getElementByClassName("index1");
+    index[i].classList.add("show");
+
+    alert();
+}*/
+
+function myFunction() {
+    document.getElementsByClassName("index1").style.opacity = "0.7 !important";
+}

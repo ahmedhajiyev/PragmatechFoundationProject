@@ -17,15 +17,17 @@ a {
 }
 
 header {
-    padding: 0.5rem 1rem;
     background-color: black;
+    width: 100%;
 }
 
 .header {
+    background-color: #000000;
+    position: fixed;
+    z-index: 1;
     display: flex;
     justify-content: center;
-    margin: 0 9%;
-    width: 82%;
+    width: 100%;
     height: 66px;
 }
 
@@ -76,7 +78,7 @@ header {
 
 .header .header-nav .header-list li {
     font-size: 16px;
-    padding-top: 1rem;
+    padding-top: 1.3rem;
     padding-bottom: 0.7rem;
     padding-left: 20px;
     padding-right: 20px;
@@ -157,6 +159,8 @@ header {
     width: 82%;
     height: 750px;
     margin: 0 9%;
+    position: relative;
+    top: 60px;
     display: flex;
     justify-content: center;
 }
@@ -388,6 +392,8 @@ header {
     display: inline-flex;
     justify-content: center;
     text-align: center;
+    transform: translateX(-50%);
+    left: 50%;
 }
 
 .resume .resume-content .resume-content-text h1 {
@@ -473,9 +479,9 @@ header {
 }
 
 .resume .resume-content .resume-content-right {
-    position: absolute;
+    position: relative;
     top: 219px;
-    right: 0;
+    left: 15px;
     width: 570px;
     height: 1089px;
     padding: 0 15px;
@@ -978,7 +984,9 @@ header {
     height: 315px;
     flex-wrap: wrap;
     justify-content: center;
-    display: none;
+    display: flex;
+    background-color: #ffbd39da;
+    opacity: 0;
 }
 
 .projects .projects-container .projects-container-content .index1 h3 {
@@ -995,12 +1003,10 @@ header {
     top: 85px;
 }
 
-.index1:hover {
-    display: block;
+.show {
+    opacity: 0.9 !important;
 }
 
-
-}
 .projects .projects-container .projects-container-content .index1 .indexSpan {
     display: flex;
     justify-content: center;
@@ -1012,51 +1018,62 @@ header {
     font-size: 12px;
     font-weight: 600;
 }
+
 .projects .projects-container .projects-container-content .projects-container-content1 {
     padding: 0 15px;
 }
+
 .projects .projects-container .projects-container-content .projects-container-content1 .row1 {
     height: 315px;
     width: 100%;
     background: #ffbd39;
 }
+
 .projects .projects-container .projects-container-content .projects-container-content1 .row1 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .projects .projects-container .projects-container-content .projects-container-content2 {
     padding: 0 15px;
 }
+
 .projects .projects-container .projects-container-content .projects-container-content2 .row2 {
     height: 315px;
     background: #ffbd39;
 }
+
 .projects .projects-container .projects-container-content .projects-container-content2 .row2 img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
+
 .projects .projects-container .projects-container-content .projects-container-content3 {
     height: 630px;
     padding: 0 15px;
     position: absolute;
     top: 345px;
 }
+
 .projects .projects-container .projects-container-content .projects-container-content3 div {
     width: 100%;
     height: 285px;
     background: #ffbd39;
 }
+
 .projects .projects-container .projects-container-content .projects-container-content3 img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
+
 .projects .projects-container .projects-container-content .projects-container-content3 .row4 {
     position: relative;
     top: 30px;
 }
+
 .projects .projects-container .projects-container-content .projects-container-content4 {
     height: 630px;
     padding: 0 15px;
@@ -1064,30 +1081,37 @@ header {
     top: 345px;
     right: 0px;
 }
+
 .projects .projects-container .projects-container-content .projects-container-content4 div {
     width: 100%;
     height: 285px;
     background: #ffbd39;
 }
+
 .projects .projects-container .projects-container-content .projects-container-content4 img {
     object-fit: cover;
     width: 100%;
     height: 100%;
     z-index: 1;
 }
+
 .projects .projects-container .projects-container-content .projects-container-content4 .row6 {
     position: relative;
     top: 30px;
 }
+
 .projects .projects-container .projects-container-content .image:hover {
     opacity: 0.1;
     background: #ffbd39;
 }
+
 .projects-container-content image:checked+.index1 {
     display: block !important;
 }
 
+
 /*Our Blog*/
+
 .blog {
     width: 100%;
     height: 1100px;
@@ -1095,12 +1119,14 @@ header {
     display: flex;
     justify-content: center;
 }
+
 .blog .blog-container {
     width: 1140px;
     height: 876px;
     margin: 0 20%;
     padding: 0 15px;
 }
+
 .blog .blog-container .blog-container-text {
     width: 1140px;
     height: 219px;
@@ -1110,6 +1136,7 @@ header {
     display: flex;
     justify-content: center;
 }
+
 .blog .blog-container .blog-container-text h1 {
     position: absolute;
     top: 0;
@@ -1120,6 +1147,7 @@ header {
     line-height: 201.6px;
     margin: 0 0 8px;
 }
+
 .blog .blog-container .blog-container-text h2 {
     margin: 0 0 24px;
     position: absolute;
@@ -1127,6 +1155,7 @@ header {
     font-size: 50px;
     font-weight: 700;
 }
+
 .blog .blog-container .blog-container-text p {
     position: relative;
     top: 105px;
@@ -1137,26 +1166,31 @@ header {
     font-weight: 400;
     color: #999999;
 }
+
 .blog .blog-container .blog-container-content {
     display: flex;
     position: relative;
     height: 609px;
 }
+
 .blog .blog-container .blog-container-content div {
     width: 100%;
     height: 609px;
     padding: 0 15px;
 }
+
 .blog .blog-container .blog-container-content .blog-image {
     width: 100%;
     height: 350px;
     padding: 0;
 }
+
 .blog .blog-container .blog-container-content img {
     object-fit: cover;
     height: 100%;
     width: 100%;
 }
+
 .blog .blog-container .blog-container-content .blog-container-span {
     position: absolute;
     top: 350px;
@@ -1168,12 +1202,18 @@ header {
     width: 360px;
     height: 200px;
 }
+
+.blog .blog-container .blog-container-content .blog-container-span i {
+    padding-right: 5px;
+}
+
 .blog .blog-container .blog-container-content a {
     position: relative;
     font-size: 20px;
     margin-bottom: 16px;
     font-weight: 500;
 }
+
 .blog .blog-container .blog-container-content .text {
     position: relative;
     top: 50px;
@@ -1181,6 +1221,7 @@ header {
     margin-bottom: 16px;
     font-weight: 500;
 }
+
 .blog .blog-container .blog-container-content p {
     position: relative;
     top: 60px;
@@ -1191,12 +1232,14 @@ header {
     font-weight: 400;
     color: #999999;
 }
+
 .blog-section {
     width: 100%;
     height: 142px;
     display: flex;
     justify-content: center;
 }
+
 .blog-section .blog-section-parts {
     width: 100%;
     height: 142px;
@@ -1206,6 +1249,7 @@ header {
     justify-content: center;
     background-color: transparent;
 }
+
 .blog-section .blog-section-parts div {
     width: 255px;
     height: 142px;
@@ -1217,6 +1261,7 @@ header {
     justify-content: center;
     align-items: center;
 }
+
 .blog-section .blog-section-parts span {
     position: relative;
     font-weight: 700;
@@ -1224,11 +1269,13 @@ header {
     color: #ffbd39;
     display: block;
 }
+
 .blog-section .blog-section-parts p {
     display: block;
     position: absolute;
     bottom: 30px;
 }
+
 .blog-end {
     width: 100%;
     height: 464px;
@@ -1243,6 +1290,7 @@ header {
     display: flex;
     justify-content: center;
 }
+
 .blog-end .blog-end-container {
     width: 1140px;
     height: 192px;
@@ -1251,9 +1299,11 @@ header {
     display: flex;
     justify-content: center;
 }
+
 .blog-end .blog-end-container .blog-end-container-content {
     text-align: center;
 }
+
 .blog-end .blog-end-container .blog-end-container-content h2 {
     font-family: "Poppins", Arial, sans-serif;
     color: #fff;
@@ -1262,9 +1312,11 @@ header {
     top: 48px;
     position: relative;
 }
+
 .blog-end .blog-end-container .blog-end-container-content h2 span {
     color: #ffbd39;
 }
+
 .blog-end .blog-end-container .blog-end-container-content p {
     font-size: 16px;
     line-height: 1.8;
@@ -1274,10 +1326,12 @@ header {
     top: 55px;
     width: 635px;
 }
+
 .blog-end .blog-end-container .blog-end-container-content .button {
     top: 60px;
     height: 52px;
 }
+
 .blog-end .blog-end-container .blog-end-container-content .button a {
     border: 1px solid #ffbd39;
     border-radius: 100px;
@@ -1292,7 +1346,9 @@ header {
     position: relative;
 }
 
+
 /*Contact Me*/
+
 .contact {
     width: 100%;
     height: 1248px;
@@ -1303,12 +1359,14 @@ header {
     display: flex;
     justify-content: center;
 }
+
 .contact .contact-container {
     width: 1140px;
     height: 1136px;
     margin: 0 20%;
     padding: 0 15px;
 }
+
 .contact .contact-container .contact-container-text {
     width: 1140px;
     height: 191px;
@@ -1319,6 +1377,7 @@ header {
     position: relative;
     top: 8%;
 }
+
 .contact .contact-container .contact-container-text h1 {
     position: absolute;
     top: -26px;
@@ -1329,6 +1388,7 @@ header {
     line-height: 201.6px;
     margin: 0 0 8px;
 }
+
 .contact .contact-container .contact-container-text h2 {
     margin: 0 0 24px;
     position: absolute;
@@ -1336,6 +1396,7 @@ header {
     font-size: 50px;
     font-weight: 700;
 }
+
 .contact .contact-container .contact-container-text p {
     position: relative;
     top: 105px;
@@ -1348,6 +1409,7 @@ header {
     text-align: center;
     width: 55%;
 }
+
 .contact .contact-container .contact-container-rows {
     width: 1140px;
     height: 301px;
@@ -1356,6 +1418,15 @@ header {
     position: relative;
     top: 13%;
 }
+
+.contact .contact-container .contact-container-rows i {
+    position: relative;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #ffbd39;
+}
+
 .contact .contact-container .contact-container-rows div {
     width: 285px;
     height: 300px;
@@ -1364,6 +1435,7 @@ header {
     justify-content: center;
     position: relative;
 }
+
 .contact .contact-container .contact-container-rows .circle {
     display: inline-flex;
     height: 100px;
@@ -1371,6 +1443,7 @@ header {
     background-color: #1A1A1AFF;
     border-radius: 100px;
 }
+
 .contact .contact-container .contact-container-rows h3 {
     position: absolute;
     top: 42%;
@@ -1378,6 +1451,7 @@ header {
     font-weight: 500;
     text-transform: uppercase;
 }
+
 .contact .contact-container .contact-container-rows p {
     font-size: 16px;
     line-height: 1.8;
@@ -1388,6 +1462,7 @@ header {
     text-align: center;
     width: 210px;
 }
+
 .contact .contact-container .contact-container-rows a {
     font-size: 16px;
     line-height: 1.8;
@@ -1395,6 +1470,7 @@ header {
     position: absolute;
     top: 55%;
 }
+
 .contact .contact-form {
     width: 1110px;
     height: 552px;
@@ -1402,30 +1478,37 @@ header {
     bottom: 0;
     display: flex;
 }
+
 .contact .contact-form .contact-form-image {
     width: 50%;
     height: 100%;
 }
+
 .contact .contact-form .contact-form-image img {
     object-fit: cover;
     height: 100%;
     width: 100%;
 }
+
 .contact .contact-form .form {
     width: 50%;
     height: 100%;
     background-color: #F8F9FAFF;
 }
+
 .contact .contact-form .form .first {
     padding: 48px 0 16px 0;
 }
+
 .contact .contact-form .form .fourth input {
     height: 166px;
     place-items: start;
 }
+
 .contact .contact-form .form form {
     padding: 8px 0;
 }
+
 .contact .contact-form .form input {
     width: 457px;
     height: 50px;
@@ -1436,6 +1519,7 @@ header {
     border-radius: 5px;
     border: 0.5px solid #CED4DAFF;
 }
+
 .contact .contact-form .form .last input {
     width: 212px;
     height: 52px;
@@ -1449,7 +1533,9 @@ header {
     left: 28%;
 }
 
+
 /*Footer*/
+
 .footer {
     width: 100%;
     height: 678px;
@@ -1458,6 +1544,7 @@ header {
     justify-content: center;
     position: relative;
 }
+
 .footer .footer-container {
     width: 1140px;
     height: 454px;
@@ -1466,27 +1553,32 @@ header {
     display: flex;
     justify-content: center;
 }
+
 .footer .footer-container div {
     width: 285px;
     height: 365px;
     padding: 0 15px;
 }
+
 .footer .footer-container h2 {
     color: #fff;
     margin-bottom: 40px;
     font-size: 22px;
     font-weight: 600;
 }
+
 .footer .footer-container p {
     font-size: 16px;
     line-height: 28.8px;
     font-weight: 400;
     color: rgba(255, 255, 255, .7);
 }
+
 .footer .footer-container ul li {
     list-style: none;
     padding: 5px 0;
 }
+
 .footer .footer-container a,
 li {
     font-size: 16px;
@@ -1494,38 +1586,62 @@ li {
     font-weight: 400;
     color: rgba(255, 255, 255, .7);
 }
+
 .footer .footer-container .row1 .social {
     display: flex;
     position: relative;
     top: 65px;
     width: 285px;
 }
+
 .footer .footer-container .row1 .social a {
     width: 50px;
     height: 50px;
     border-radius: 100px;
     background-color: #1A1A1AFF;
 }
+
 .footer .footer-container .row1 .social .twitter {
     position: absolute;
     left: 0;
 }
+
 .social li {
     position: relative;
     display: flex;
     justify-content: center;
-    top: 5px;
+    top: 7px;
     font-size: 25px;
 }
+
 .footer .footer-container .row1 .social .facebook {
     position: absolute;
     left: 23%;
 }
+
 .footer .footer-container .row1 .social .instagram {
     position: absolute;
     left: 46%;
 }
+
 .footer span {
     position: absolute;
     bottom: 10px;
+}
+
+.footer .footer-container .row2 a,
+.row3 a,
+.row4 a,
+.row4 p {
+    display: flex;
+    position: relative;
+}
+
+.footer .footer-container .row2 i,
+.row3 i,
+.row4 i {
+    position: absolute;
+    left: -30px;
+    top: 10px;
+    color: #999999;
 }
