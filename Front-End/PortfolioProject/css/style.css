@@ -126,8 +126,9 @@ header {
 
 /*Main*/
 
-.slider {
-    display: none;
+.sliderShowContainer {
+    overflow: hidden;
+    height: 750px;
 }
 
 .buttons {
@@ -649,12 +650,6 @@ header {
     color: #fff;
 }
 
-.services .services-content .services-content-row div:hover+h3:hover,
-.underline::after {
-    content: '';
-    color: #000000;
-}
-
 .services .services-content .services-content-row div a {
     width: 350px;
     height: 219px;
@@ -705,8 +700,8 @@ header {
     bottom: 35%;
 }
 
-.services .services-content .services-content-row .underline:hover {
-    border-bottom-color: #000;
+.services .services-content .services-content-row div:hover .underline {
+    border-top-color: #000;
 }
 
 
@@ -986,10 +981,105 @@ header {
     justify-content: center;
     display: flex;
     background-color: #ffbd39da;
-    opacity: 0;
+}
+
+.projects .projects-container .projects-container-content .index2 {
+    position: absolute;
+    width: 709.92px;
+    height: 315px;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    background-color: #ffbd39da;
+}
+
+.projects .projects-container .projects-container-content .index3 {
+    position: absolute;
+    width: 710.92px !important;
+    margin-right: 15px;
+    height: 315px;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    background-color: #ffbd39da;
+}
+
+.projects .projects-container .projects-container-content .index4 {
+    position: absolute;
+    width: 310.95px;
+    height: 315px;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    background-color: #ffbd39da;
+}
+
+.projects .projects-container .projects-container-content .index5 {
+    position: absolute;
+    width: 339.95px;
+    height: 315px;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    background-color: #ffbd39da;
+}
+
+.projects .projects-container .projects-container-content .index6 {
+    position: absolute;
+    width: 340.95px !important;
+    height: 315px;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    background-color: #ffbd39da;
 }
 
 .projects .projects-container .projects-container-content .index1 h3 {
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 20px;
+    height: 25px;
+    width: 260px;
+    text-align: center;
+}
+
+.projects .projects-container .projects-container-content .index2 h3 {
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 20px;
+    height: 25px;
+    width: 260px;
+    text-align: center;
+}
+
+.projects .projects-container .projects-container-content .index3 h3 {
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 20px;
+    height: 25px;
+    width: 260px;
+    text-align: center;
+}
+
+.projects .projects-container .projects-container-content .index4 h3 {
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 20px;
+    height: 25px;
+    width: 260px;
+    text-align: center;
+}
+
+.projects .projects-container .projects-container-content .index5 h3 {
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 20px;
+    height: 25px;
+    width: 260px;
+    text-align: center;
+}
+
+.projects .projects-container .projects-container-content .index6 h3 {
     font-weight: 400;
     line-height: 1.5;
     font-size: 20px;
@@ -1003,11 +1093,100 @@ header {
     top: 85px;
 }
 
+.index2 a {
+    position: relative;
+    top: 95px;
+}
+
+.index3 a {
+    position: relative;
+    top: 85px;
+}
+
+.index4 a {
+    position: relative;
+    top: 85px;
+}
+
+.index5 a {
+    position: relative;
+    top: 85px;
+}
+
+.index6 a {
+    position: relative;
+    top: 85px;
+}
+
 .show {
+    opacity: 0;
+}
+
+.hover:hover .show {
     opacity: 0.9 !important;
 }
 
 .projects .projects-container .projects-container-content .index1 .indexSpan {
+    display: flex;
+    justify-content: center;
+    width: 339px;
+    height: 18px;
+    line-height: 1.8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.projects .projects-container .projects-container-content .index2 .indexSpan {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 18px;
+    line-height: 1.8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.projects .projects-container .projects-container-content .index3 .indexSpan {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 18px;
+    line-height: 1.8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.projects .projects-container .projects-container-content .index4 .indexSpan {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 18px;
+    line-height: 1.8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.projects .projects-container .projects-container-content .index5 .indexSpan {
+    display: flex;
+    justify-content: center;
+    width: 339px;
+    height: 18px;
+    line-height: 1.8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.projects .projects-container .projects-container-content .index6 .indexSpan {
     display: flex;
     justify-content: center;
     width: 339px;
@@ -1638,8 +1817,8 @@ li {
 }
 
 .footer .footer-container .row2 i,
-.row3 i,
-.row4 i {
+.footer .footer-container .row3 i,
+.footer .footer-container .row4 i {
     position: absolute;
     left: -30px;
     top: 10px;

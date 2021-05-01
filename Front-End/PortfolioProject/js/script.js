@@ -1,4 +1,4 @@
-let slideIndex = 0;
+/*let slideIndex = 0;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -30,10 +30,10 @@ function showSlides(n) {
 }
 
 setInterval(() => {
-    showSlides();
+    showSlides(slideIndex += 1);
 
 }, 2000)
-
+*/
 
 
 //
@@ -46,6 +46,44 @@ setInterval(() => {
     alert();
 }*/
 
-function myFunction() {
+/*function myFunction() {
     document.getElementsByClassName("index1").style.opacity = "0.7 !important";
+}*/
+
+/*let move = 0;
+let sliderLine = document.querySelector('.slider');
+
+console.log(sliderLine)
+
+document.querySelector('.dot1').addEventListener('click', () => {
+    sliderLine.style.transition = 'all 0.8s ease 0s';
+    move += 291;
+    if (move > 873) {
+        sliderLine.style.transition = 'none';
+        move = 0
+    }
+    sliderLine.style.left = -move + 'px';
+})
+
+document.querySelector('.dot2').addEventListener('click', () => {
+    sliderLine.style.transition = 'all 0.8s ease 0s';
+    move -= 291;
+    if (move < 0) {
+        sliderLine.style.transition = 'none';
+        move = 873
+    }
+    sliderLine.style.left = -move + 'px';
+})*/
+
+
+let smooth = document.querySelectorAll('.smooth');
+for (let i = 0; i < smooth.length; i++) {
+    smooth[i].addEventListener('click', (e) => {
+        e.preventDefault();
+        const sectionId = e.target.getAttribute('href');
+        document.querySelector(sectionId).scrollIntoView({
+            behavior: 'smooth'
+        })
+    })
+
 }
