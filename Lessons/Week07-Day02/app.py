@@ -1,5 +1,3 @@
-
-
 x = input("Print: " + "")
 print ("Print: " + x)
 
@@ -7,8 +5,7 @@ print ("Print: " + x)
 ad = input("Ad: ")
 soyad = input("Soyad: ")
 tam_ad = (ad.capitalize()) + " " + (soyad.capitalize())
-print("Salam, " +  tam_ad + ".")
-
+print("Salam, " + tam_ad + ".")
 
 
 x = int(input("Number: " ))
@@ -39,6 +36,7 @@ if x < 0:
     print("Yoxdur")
 else :
     print( "Var")
+
 
 a = 'Visual'
 b = 'Studio'
