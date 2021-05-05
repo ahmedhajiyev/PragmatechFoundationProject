@@ -113,7 +113,7 @@ if 3 <=  len(x) <= 11:
         if len(z) == 4:
             a = input('Emailiniz: ')
             b = "@gmail.com"
-            if 10 <= len(a) <= 22: #and a in "@gmail.com":
+            if 10 <= len(a) <= 22 and a.endswith("@gmail.com"):
                 c = input('Sifre: ')
                 if 6 <= len(c) <= 13:
                     d = input('Sifreni tesdiq edin: ')
