@@ -33,11 +33,11 @@
 #     print('not empty')
 
 
-# 6
+# # 6
 # foods = ("coconut", "walnut", "carrot", "broccoli", "onion")  
 # for i in foods:
 #     print('Foods: ' + i)
-# # foods[0] = "tomatoes "
+# foods[0] = "tomatoes "
 # print(foods)
 # foods = list(foods)
 # foods[1] = "patatoes "
@@ -47,11 +47,11 @@
 #     print("Foods: " + x)
 
 
-# 7
-list = ["Resad","Elxan","Rasim","admin","Nicat"]
+# # 7
+# list = ["Resad","Elxan","Rasim","admin","Nicat"]
 
-for name in list:
-    if name == "admin":
-        print("Hello admin, would you like to see a status report?")
-    else:
-        print(f"Hello {name}, thank you for logging in again.")
+# for name in list:
+#     if name == "admin":
+#         print("Hello admin, would you like to see a status report?")
+#     else:
+#         print(f"Hello {name}, thank you for logging in again.")
