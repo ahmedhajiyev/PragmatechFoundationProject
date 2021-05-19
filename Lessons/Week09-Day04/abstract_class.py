@@ -42,8 +42,7 @@ K.model()
 
 
 
-# Python program showing
-# abstract base class work
+
  
 from abc import ABC, abstractmethod
 class Animal(ABC):
@@ -55,25 +54,25 @@ class Animal(ABC):
  
 class Snake(Animal):
  
-    def move(self):
+    def function(self):
         print("I can crawl")
  
 class Dog(Animal):
  
-    def move(self):
+    def function(self):
         print("I can bark")
  
 class Lion(Animal):
  
-    def move(self):
+    def function(self):
         print("I can roar")
          
 
 K = Snake()
-K.move()
+K.function()
  
 R = Dog()
-R.move()
+R.function()
  
 K = Lion()
-K.move()
+K.function()
