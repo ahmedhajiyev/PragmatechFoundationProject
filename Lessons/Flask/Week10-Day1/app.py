@@ -7,11 +7,11 @@ def home():
     return 'Home Page '
 
 @app.route('/about')
-def home():
+def about():
     return 'This is about page '
 
 @app.route('/news')
-def home():
+def news():
     return 'This is news page '
 
 if __name__ == "__main__":
