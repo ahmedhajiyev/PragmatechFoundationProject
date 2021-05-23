@@ -10,7 +10,9 @@ def home():
 def home():
     return 'This is about page '
 
-
+@app.route('/news')
+def home():
+    return 'This is news page '
 
 if __name__ == "__main__":
     app.run(debug=True)
