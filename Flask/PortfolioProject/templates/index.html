@@ -399,7 +399,6 @@
         </div>
         <!--OUR BLOG-->
 
-        {% for blog in blogs %}
         <div class="blog" id="blog">
             <div class="blog-container">
                 <div class="blog-container-text">
@@ -410,13 +409,14 @@
                         <p>
                 </div>
                 <div class="blog-container-content">
+                    {% for blog in blogs %}
                     <a href="{{url_for('single_blog', id=blog.id)}}">
                         <div class="blog-container-row1 col-4">
                             <div class="blog-image">
                                 <img src="static/uploads/{{blog.image}}" alt="">
                             </div>
                             <div class="blog-container-span">
-                                <span class="date">{{blog.date_posted}}</span>
+                                <span class="date">{{blog.date_posted.strftime('%M-%d-%y')}}</span>
                                 <span>Admin</span>
                                 <span><i class="fas fa-comment-alt "></i>3</span>
                             </div>
@@ -426,27 +426,9 @@
                     </div>
 
 
-                    <a href="/blog">
-                        <div class="blog-container-row2 col-4">
-                            <div class="blog-image">
-                                <img src="{{url_for('static', filename='img/image_2.jpg')}}" alt="">
 
-                            </div>
-                            <div class="blog-container-span">
-                                <span class="date">June 21, 2019</span>
-                                <span>Admin</span>
-                                <span><i class="fas fa-comment-alt "></i>3</span>
-                            </div>
-                            <a href="" class="text"> Why Lead Generation is Key for Business Growth</a>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                        </div>
-                    </a>
-                    <a href="/blog">
-                        <div class="blog-container-row3 col-4">
 
-                        </div>
-                    </a>
-
+                    {% endfor %}
                 </div>
 
             </div>
@@ -454,7 +436,6 @@
 
         </div>
 
-        {% endfor %}
 
         <div class="blog-section">
             <div class="blog-section-parts">
