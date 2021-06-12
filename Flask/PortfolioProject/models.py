@@ -1,6 +1,20 @@
 from PortfolioProject import db
 from datetime import datetime
 
+class About(db.Model):
+
+    __tablename__= 'about'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    brth_day = db.Column(db.Integer, nullable=False)
+    adress = db.Column(db.String(100), nullable=False)
+    zip_code = db.Column(db.Integer, nullable=False)
+    email = db.Column(db.String(100), nullable=False)
+
+    def __repr__(self):
+        return f'About {self.name}'
+
+
 
 class Blog(db.Model):
 

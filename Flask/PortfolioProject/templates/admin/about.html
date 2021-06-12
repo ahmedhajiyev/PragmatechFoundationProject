@@ -1,0 +1,43 @@
+{% extends 'admin/base.html' %} {% block content %}
+
+<div class="container" style="position: relative; top: 50px;">
+    <div class="row">
+        <div class="col md-12">
+            <div class="jumbotron p-3">
+                <h2>About
+                    <a href=""> <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#mymodal">Update About</button></a>
+                </h2>
+                <table class="table table-hover table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Fullname</th>
+                        <th>Birthday</th>
+                        <th>Adress</th>
+                        <th>Zip Code</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </tr>
+                    <tr>
+                        <td>{{about.id}}</td>
+                        <td>{{about.title}}</td>
+                        <td>{{about.adress}}</td>
+                        <td>{{about.zip_code}}</td>
+                        <td>{{about.email}}</td>
+                        <td>{{about.phone}}</td>
+                        <td>
+                            <a href="{{url_for('blog_edit', id=blog.id)}}" class="btn btn-info btn-xs">Edit</a>
+                            <a href="{{url_for('blog_delete', id=blog.id)}}" class="btn btn-danger btn-xs" onclick="return confirm('Are You Sure To Delete?')">Delete</a>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+{% endblock %}

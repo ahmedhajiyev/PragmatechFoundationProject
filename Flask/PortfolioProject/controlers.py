@@ -1,12 +1,61 @@
 from PortfolioProject import app, os, db
 from flask import render_template, redirect, request
 from werkzeug.utils import secure_filename
-from PortfolioProject.models import Blog, BlogCategory
+from PortfolioProject.models import Blog, BlogCategory, About
 from flask.helpers import url_for
+from flask.templating import render_template_string
+
 
 
 
 #ADMIN INTERFACE
+
+
+@app.route('/admin-about-edit', methods=['GET', "POST"])
+def about_edit():
+    abouts = About.query.all()
+    if request.method == 'POST':
+        about= About(
+            name=request.form['title'],
+            brth_day=request.form['brth-day'],
+            adress=request.form['adrss'],
+            zip_code=request.form['zip-code'],
+            email = request.form['my_email']
+        )
+        db.session.add(about)
+        db.session.commit()
+
+    return render_template('admin/about-edit.html', abouts=abouts)
+
+
+
+
+@app.route('/admin-about')
+def admin_about():
+    about = About.query.all()
+    return render_template('admin/about.html', about=about)
+
+
+# @app.route("/admin-blog-edit/<int:id>", methods=['GET', "POST"])
+# def about_edit(id):
+#     abouts = Blog.query.get_or_404(id)
+#     if request.method == 'POST':
+#         about_edit.name = request.form['title']
+#         about_edit.brth_day = request.form['short-desc']
+#         blog.description = request.form['description']
+#         blog.image = filename
+#         blog.category = request.form['category']
+#         db.session.commit()
+#         return redirect(url_for('blog_list'))
+#     return render_template('admin/blog-edit.html', abouts=abouts)
+
+
+
+
+
+
+
+
 @app.route('/admin-blog-list')
 def blog_list():
     blogs = Blog.query.all()
@@ -69,3 +118,10 @@ def user_blog_list():
 def single_blog(id):
     blog = Blog.query.get_or_404(id)
     return render_template('blog.html/', blog=blog)
+
+
+@app.route('/about')
+def about():
+    about = About.query.all()
+    return render_template('index.html/', about=about)
+    
