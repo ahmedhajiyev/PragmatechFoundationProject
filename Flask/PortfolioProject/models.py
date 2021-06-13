@@ -10,6 +10,7 @@ class About(db.Model):
     adress = db.Column(db.String(100), nullable=False)
     zip_code = db.Column(db.Integer, nullable=False)
     email = db.Column(db.String(100), nullable=False)
+    phone = db.Column(db.Integer, nullable=False)
 
     def __repr__(self):
         return f'About {self.name}'

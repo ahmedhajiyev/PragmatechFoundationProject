@@ -1,42 +1,44 @@
 {% extends 'admin/base.html' %} {% block content %}
 
-<div class="container" style="position: relative; top: 50px;">
+
+
+<div class="container" style="position: relative; top: 70px; left:0px">
     <div class="row">
-        <div class="col md-12">
-            <div class="jumbotron p-3">
-                <h2>About
-                    <a href=""> <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#mymodal">Update About</button></a>
-                </h2>
-                <table class="table table-hover table-dark">
-                    <tr>
-                        <th>ID</th>
-                        <th>Fullname</th>
-                        <th>Birthday</th>
-                        <th>Adress</th>
-                        <th>Zip Code</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                    </tr>
-                    <tr>
-                        <td>{{about.id}}</td>
-                        <td>{{about.title}}</td>
-                        <td>{{about.adress}}</td>
-                        <td>{{about.zip_code}}</td>
-                        <td>{{about.email}}</td>
-                        <td>{{about.phone}}</td>
-                        <td>
-                            <a href="{{url_for('blog_edit', id=blog.id)}}" class="btn btn-info btn-xs">Edit</a>
-                            <a href="{{url_for('blog_delete', id=blog.id)}}" class="btn btn-danger btn-xs" onclick="return confirm('Are You Sure To Delete?')">Delete</a>
-
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-        </div>
+        <p>Fullname:</p>
+        <span>{{abouts.name}}</span>
+    </div>
+    <div class="row">
+        <p>Date of birth:</p>
+        <span>{{abouts.brth_day}}</span>
+    </div>
+    <div class="row">
+        <p>Adress:{{abouts.adress}}</p>
+        <span>{{abouts.adress}}</span>
+    </div>
+    <div class="row">
+        <p>Zip code:</p>
+        <span>{{abouts.zip_code}}</span>
+    </div>
+    <div class="row">
+        <p>Email:</p>
+        <span>{{abouts.email}}</span>
+    </div>
+    <div class="row">
+        <p>Phone:</p>
+        <span>{{abouts.title}}</span>
     </div>
 
 
+    {% for about in abouts %}
+    <div style="position: absolute; top:0px; left: 140px;">
+        <p>{{about.name}}</p>
+        <p>{{about.brth_day}}</p>
+        <p>{{about.adress}}</p>
+        <p>{{about.zip_code}}</p>
+        <p>{{about.email}}</p>
+        <p>{{about.phone}}</p>
+    </div>
+    {% endfor%}
 </div>
 
 

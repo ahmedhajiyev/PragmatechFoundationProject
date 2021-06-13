@@ -3,25 +3,24 @@
 <div style="    position: relative;
 top: 75px;">
     <form action="" method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
         <div class="form-group">
-            <label>Fullname:</label>
-            <input type="text" class="form-control" name="title">
+            {{ form.name.label }} {{ form.name(class="form-control") }}
         </div>
         <div class="form-group">
-            <label>Birthday:</label>
-            <input type="text" class="form-control" name="brth-day">
+            {{ form.brth_day.label }} {{ form.brth_day(class="form-control") }}
         </div>
         <div class="form-group">
-            <label>Adress:</label>
-            <input type="text" class="form-control" name="adrss">
+            {{ form.adress.label }} {{ form.adress(class="form-control") }}
         </div>
         <div class="form-group">
-            <label>Zip Code</label>
-            <input class="form-control" name='zip-code'>
+            {{ form.zip_code.label }} {{ form.zip_code(class="form-control") }}
         </div>
         <div class="form-group">
-            <label>Email</label>
-            <input class="form-control" name='my_email'>
+            {{ form.email.label }} {{ form.email(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.phone.label }} {{ form.phone(class="form-control") }}
         </div>
 
         <div class="form-group">
@@ -29,7 +28,7 @@ top: 75px;">
             <input type="file" class="form-control" name="file">
         </div>
         <div class="form-group">
-            <button class="btn btn-primary" type="submit">Update</button>
+            {{ form.submit(class="btn btn-primary") }}
         </div>
     </form>
 </div>

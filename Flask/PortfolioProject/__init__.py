@@ -5,6 +5,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 db = SQLAlchemy(app)
 from flask_migrate import Migrate
 migrate = Migrate(app, db)
+app.config['SECRET_KEY'] = '5f47fc632a585184688be1969d20bfcb'
 
 #PHOTO UPLOAD
 import os

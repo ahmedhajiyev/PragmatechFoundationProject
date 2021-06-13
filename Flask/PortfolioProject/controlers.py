@@ -4,6 +4,7 @@ from werkzeug.utils import secure_filename
 from PortfolioProject.models import Blog, BlogCategory, About
 from flask.helpers import url_for
 from flask.templating import render_template_string
+from PortfolioProject.forms import AboutForm
 
 
 
@@ -14,26 +15,40 @@ from flask.templating import render_template_string
 @app.route('/admin-about-edit', methods=['GET', "POST"])
 def about_edit():
     abouts = About.query.all()
-    if request.method == 'POST':
-        about= About(
-            name=request.form['title'],
-            brth_day=request.form['brth-day'],
-            adress=request.form['adrss'],
-            zip_code=request.form['zip-code'],
-            email = request.form['my_email']
+    # if request.method == 'POST':
+    #     about= About(
+    #         name=request.form['title'],
+    #         brth_day=request.form['brth-day'],
+    #         adress=request.form['adrss'],
+    #         zip_code=request.form['zip-code'],
+    #         email = request.form['my_email']
+    #     )
+    #     db.session.add(about)
+    #     db.session.commit()
+        # return redirect(url_for('/admin-about'))
+    form = AboutForm()
+    if form.validate_on_submit():   
+        about = About(
+            name=form.name.data,
+            brth_day=form.brth_day.data,
+            adress=form.adress.data,
+            zip_code=form.zip_code.data,
+            email=form.email.data,
+            phone=form.phone.data
         )
         db.session.add(about)
         db.session.commit()
+        return redirect(url_for('admin_about'))
 
-    return render_template('admin/about-edit.html', abouts=abouts)
+    return render_template('admin/about-edit.html', abouts=abouts, form=form)
 
 
 
 
-@app.route('/admin-about')
+@app.route('/admin-about', methods=['GET', 'POST'])
 def admin_about():
-    about = About.query.all()
-    return render_template('admin/about.html', about=about)
+    abouts = About.query.all()
+    return render_template('admin/about.html', abouts=abouts)
 
 
 # @app.route("/admin-blog-edit/<int:id>", methods=['GET', "POST"])
@@ -111,8 +126,8 @@ def blog_delete(id):
 @app.route('/blog-list')
 def user_blog_list():
     blogs = Blog.query.all()
-
-    return render_template('index.html/', blogs=blogs)
+    about = About.query.filter_by().first()
+    return render_template('index.html/', blogs=blogs,about=about)
 
 @app.route('/single-blog/<int:id>')
 def single_blog(id):
@@ -122,6 +137,6 @@ def single_blog(id):
 
 @app.route('/about')
 def about():
-    about = About.query.all()
+    about = About.query.filter_by().first()
     return render_template('index.html/', about=about)
     
