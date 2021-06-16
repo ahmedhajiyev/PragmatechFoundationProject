@@ -435,13 +435,19 @@ header {
 
 /*Left Row*/
 
+.resume .resume-content .resume-content-div {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .resume .resume-content .resume-content-left {
     width: 570px;
-    height: 1089px;
     padding: 0 15px;
-    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
     top: 219px;
-    left: 0;
+    position: relative;
 }
 
 .resume .resume-content .resume-content-left div {
@@ -485,7 +491,6 @@ header {
 }
 
 .resume .resume-content .resume-content-right {
-    position: relative;
     top: 219px;
     left: 15px;
     width: 570px;

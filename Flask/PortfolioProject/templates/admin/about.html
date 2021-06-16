@@ -3,34 +3,29 @@
 
 
 <div class="container" style="position: relative; top: 70px; left:0px">
+    <h1>About</h1>
     <div class="row">
         <p>Fullname:</p>
-        <span>{{abouts.name}}</span>
     </div>
     <div class="row">
         <p>Date of birth:</p>
-        <span>{{abouts.brth_day}}</span>
     </div>
     <div class="row">
-        <p>Adress:{{abouts.adress}}</p>
-        <span>{{abouts.adress}}</span>
+        <p>Adress:</p>
     </div>
     <div class="row">
         <p>Zip code:</p>
-        <span>{{abouts.zip_code}}</span>
     </div>
     <div class="row">
         <p>Email:</p>
-        <span>{{abouts.email}}</span>
     </div>
     <div class="row">
         <p>Phone:</p>
-        <span>{{abouts.title}}</span>
     </div>
 
 
     {% for about in abouts %}
-    <div style="position: absolute; top:0px; left: 140px;">
+    <div style="position: absolute; top:60px; left: 140px;">
         <p>{{about.name}}</p>
         <p>{{about.brth_day}}</p>
         <p>{{about.adress}}</p>
@@ -39,6 +34,10 @@
         <p>{{about.phone}}</p>
     </div>
     {% endfor%}
+    <div class="form-group">
+        <a href="{{url_for('about_edit')}}">
+            <button class="btn btn-dark" type="submit">Update About</button></a>
+    </div>
 </div>
 
 

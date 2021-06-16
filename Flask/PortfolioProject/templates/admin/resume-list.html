@@ -1,0 +1,43 @@
+{% extends 'admin/base.html' %} {% block content %}
+
+
+<div class="container" style="position: relative; top: 50px;">
+    <div class="row">
+        <div class="col md-12">
+            <div class="jumbotron p-3">
+                <h2>Manage Resume
+                    <a href="{{url_for('resume_add')}}"> <button type="button" class="btn btn-dark float-right" data-toggle="modal" data-target="#mymodal">Add New Resume</button></a>
+                </h2>
+                <table class="table table-hover table-dark col md-12">
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Degree</th>
+                        <th>Company Name</th>
+                        <th>Description</th>
+                        <th></th>
+                    </tr>
+                    {% for resume in resumes %}
+                    <tr>
+                        <td>{{resume.id}}</td>
+                        <td>{{resume.date}}</td>
+                        <td>{{resume.degree}}</td>
+                        <td>{{resume.company_name}}</td>
+                        <td>{{resume.description}}</td>
+                        <td>
+                            <a href="{{url_for('resume_edit', id=resume.id)}}" class="btn btn-light btn-xs mb-1">Edit</a>
+
+                            <a href="{{url_for('resume_delete', id=resume.id)}}" class="btn btn-danger btn-xs mb-1" onclick="return confirm('Are You Sure To Delete?')">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}

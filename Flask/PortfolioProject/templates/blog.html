@@ -22,7 +22,7 @@
                 </div>
                 <div class="header-list">
                     <ul>
-                        <a href="">
+                        <a href="{{url_for('main_page')}}">
                             <li>Home</li>
                             <span class="underlineHeader"> 
                         </a>
@@ -270,8 +270,8 @@
                     </div>
                     <div class="recent-blog">
                         <h3>Recent Blog</h3>
+                        {% for blog in blogs %}
                         <div class="blog1">
-                            {% for blog in blogs %}
                             <a href="" class="image"> <img src="static/uploads/{{blog.image}}" alt=""></a>
                             <h3 class="heading"> <a href=""> {{blog.title}}</a></h3>
                             <div class="date">
@@ -279,8 +279,8 @@
                                 <div> <a href=""><i class="fas fa-user-alt"></i>Admin</a> </div>
                                 <div> <a href=""><i class="fas fa-comment-alt "></i>19</a> </div>
                             </div>
-                            {% endfor %}
                         </div>
+                        {% endfor %}
                     </div>
                     <div class="tag-cloud">
                         <h3>Tag Cloud</h3>

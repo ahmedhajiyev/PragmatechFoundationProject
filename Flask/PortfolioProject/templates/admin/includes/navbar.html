@@ -18,19 +18,19 @@
             <div class="header">
                 <div class="header-nav">
                     <div class="header-logo">
-                        <a href="#index.html">Clark</a>
+                        <a href="{{url_for('admin_panel')}}">Admin</a>
                     </div>
                     <div class="header-list">
-                        <ul>
-                            <a href="">
+                        <ul style='margin-bottom:  0rem;'>
+                            <a href="{{url_for('main_page')}}">
                                 <li>Home</li>
                                 <span class="underlineHeader"> 
                         </a>
-                        <a href="#about"  class="smooth">
+                        <a href="{{url_for('admin_about')}}"  class="smooth">
                             <li class="smooth">About</li>
                             <span class="underlineHeader"> 
                         </a>
-                        <a href="#resume"  class="smooth">
+                        <a href="{{url_for('resume_list')}}"  class="smooth">
                             <li class="smooth">Resume</li>
                             <span class="underlineHeader"> 
                         </a>
@@ -42,11 +42,11 @@
                             <li class="smooth">Skills</li>
                             <span class="underlineHeader"> 
                         </a>
-                        <a href="{{url_for ('blog_list')}}"  class="smooth">
+                        <a href=""  class="smooth">
                             <li class="smooth">Projects</li>
                             <span class="underlineHeader"> 
                         </a>
-                        <a href="#blog"  class="smooth">
+                        <a href="{{url_for ('blog_list')}}"  class="smooth">
                             <li class="smooth">My Blog</li>
                             <span class="underlineHeader"> 
                         </a>
