@@ -1689,9 +1689,14 @@ header {
     padding: 48px 0 16px 0;
 }
 
-.contact .contact-form .form .fourth input {
+.contact .contact-form .form .fourth {
     height: 166px;
-    place-items: start;
+    margin-left: 50px;
+    margin-top: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 0.5px solid #CED4DAFF;
+    width: 457px;
 }
 
 .contact .contact-form .form form {

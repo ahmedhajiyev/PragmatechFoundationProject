@@ -22,7 +22,7 @@
                     </div>
                     <div class="header-list">
                         <ul style='margin-bottom:  0rem;'>
-                            <a href="{{url_for('main_page')}}">
+                            <a href="{{url_for('home_list')}}">
                                 <li>Home</li>
                                 <span class="underlineHeader"> 
                         </a>
@@ -50,8 +50,12 @@
                             <li class="smooth">My Blog</li>
                             <span class="underlineHeader"> 
                         </a>
-                        <a href="#contact"  class="smooth">
-                            <li class="smooth">Contact</li>
+                        <a href="{{url_for('messages')}}"  class="smooth">
+                            <li class="smooth">Messages</li>
+                            <span class="underlineHeader"> 
+                        </a>
+                        <a href="{{url_for('comments')}}"  class="smooth">
+                            <li class="smooth">Comments</li>
                             <span class="underlineHeader"> 
                         </a>
                     </ul>

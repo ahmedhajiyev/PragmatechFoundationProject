@@ -2,10 +2,10 @@ import re
 from PortfolioProject import app, os, db
 from flask import render_template, redirect, request
 from werkzeug.utils import secure_filename
-from PortfolioProject.models import Blog, BlogCategory, About, Resume
+from PortfolioProject.models import Blog, BlogCategory, About, Comment, Resume, Home, Messages
 from flask.helpers import url_for
 from flask.templating import render_template_string
-from PortfolioProject.forms import AboutForm
+from PortfolioProject.forms import AboutForm, CommentForm, MessagesForm
 
 
 
@@ -14,6 +14,53 @@ from PortfolioProject.forms import AboutForm
 @app.route('/admin')
 def admin_panel():
     return render_template('admin/base.html/')
+
+
+@app.route('/admin/home-add', methods=['GET', "POST"])
+def home_add():
+    homes = Home.query.all()
+    if request.method == 'POST':
+        file =request.files['file']
+        filename = secure_filename(file.filename)
+        file.save(os.path.join(app.config['UPLOAD__FOLDER'], filename))
+        home = Home(
+            title=request.form['title'],
+            description=request.form['description'],
+            short_description=request.form['short-desc'],
+            image = filename
+        )
+        db.session.add(home)
+        db.session.commit()
+        return redirect(url_for('home_list'))
+    return render_template('admin/home-add.html', homes=homes)
+
+@app.route('/admin/home-list')
+def home_list():
+    homes = Home.query.all()
+    return render_template('admin/home-list.html', homes=homes)
+
+@app.route("/admin/home-edit/<int:id>", methods=['GET', "POST"])
+def home_edit(id):
+    home = Home.query.get_or_404(id)
+    if request.method == 'POST':
+        file =request.files['file']
+        filename = secure_filename(file.filename)
+        file.save(os.path.join(app.config['UPLOAD__FOLDER'], filename))
+        home.title = request.form['title']
+        home.description = request.form['description']
+        home.short_description = request.form['short-desc']
+        home.image = filename
+        db.session.commit()
+        return redirect(url_for('home_list'))
+    return render_template('admin/home-edit.html', home=home)
+
+@app.route("/admin/home-delete/<int:id>")
+def home_delete(id):
+    home = Home.query.get_or_404(id)
+    db.session.delete(home)
+    db.session.commit()
+    return redirect(url_for('home_list'))
+
 
 @app.route('/admin/about-edit', methods=['GET', "POST"])
 def about_edit():
@@ -95,7 +142,7 @@ def resume_add():
         return redirect(url_for('resume_list'))
     return render_template('admin/resume-add.html', resume=resume)
 
-@app.route("/admin/blog-edit/<int:id>", methods=['GET', "POST"])
+@app.route("/admin/resume-edit/<int:id>", methods=['GET', "POST"])
 def resume_edit(id):
     resume = Resume.query.get_or_404(id)
     resumes = Resume.query.all()
@@ -169,13 +216,44 @@ def blog_delete(id):
     return redirect(url_for('blog_list'))
 
 
+@app.route("/admin/messages")
+def messages():
+    messages = Messages.query.all()
+    return render_template('admin/messages.html', messages=messages)
+
+@app.route("/admin/messages/<int:id>")
+def messages_delete(id):
+    messages = Messages.query.get_or_404(id)
+    db.session.delete(messages)
+    db.session.commit()
+    return redirect(url_for('messages'))
+
+@app.route("/admin/comments")
+def comments():
+    comments = Comment.query.all()
+    return render_template('admin/comments.html', comments=comments)
+
+@app.route("/admin/comments/<int:id>")
+def comments_delete(id):
+    comments = Comment.query.get_or_404(id)
+    db.session.delete(comments)
+    db.session.commit()
+    return redirect(url_for('comments'))
+
 #USER INTERFACE ROUTES
-@app.route('/')
+@app.route('/', methods=["GET", "POST"])
 def main_page():
     blogs = Blog.query.all()[-3:]
     about = About.query.filter_by().first()
     resume = Resume.query.all()[-6:]
-    return render_template('index.html/',  blogs=blogs,about=about, resume=resume)
+    home = Home.query.all()
+    form = MessagesForm()
+    if form.validate_on_submit():
+        messages = Messages(user_name=form.name.data, email=form.email.data, content=form.content.data, subject=form.subject.data)
+        db.session.add(messages)
+        db.session.commit()
+        return redirect(url_for('main_page',messages=messages))
+    return render_template('index.html/',  blogs=blogs,about=about, resume=resume,  home=home, form=form)
 
 
 
@@ -185,21 +263,35 @@ def main_page():
 def user_blog_list():
     blogs = Blog.query.all()[-3:]
     about = About.query.filter_by().first()
+    home = Home.query.all()
     return render_template('index.html/', blogs=blogs,about=about)
 
-@app.route('/single-blog/<int:id>')
+@app.route('/single-blog/<int:id>' , methods=['GET','POST'])
 def single_blog(id):
     blog = Blog.query.get_or_404(id)
     blogs = Blog.query.all()[-3:]
-    # comments = Comment.query.filter(Comment.post_id == Post.id).all()
-    return render_template('blog.html/', blog=blog, blogs=blogs)
+    blogcategories = BlogCategory.query.all()
+    comments = blog.comments
+    comment_count = Comment.query.filter(Comment.blog_id == blog.id).count()
+    form = CommentForm()
+    if form.validate_on_submit():
+        comment = Comment(user_name=form.name.data, email=form.email.data, content=form.content.data, host=blog)
+        db.session.add(comment)
+        db.session.commit()
+        return redirect(url_for('single_blog',id=blog.id , comment=comment, comments=comments, comment_count=comment_count))
+    return render_template('blog.html/', blog=blog, blogs=blogs, form=form , comments=comments, comment_count=comment_count, blogcategories=blogcategories)
 
 
+@app.route('/categories')
+def categories():
+
+    return render_template('categories.html/')
 
 @app.route('/about')
 def about():
     about = About.query.filter_by(id='-1').first()
     blogs = Blog.query.all()[-3:]
+   
     return render_template('index.html/', about=about, blogs=blogs)
 
 

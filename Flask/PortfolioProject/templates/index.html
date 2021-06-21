@@ -38,7 +38,7 @@
                             <li class="smooth">Services</li>
                             <span class="underlineHeader"> 
                         </a>
-                        <a href="#skils"  class="smooth">
+                        <a href="#skills"  class="smooth">
                             <li class="smooth">Skills</li>
                             <span class="underlineHeader"> 
                         </a>
@@ -67,29 +67,30 @@
         <div class="sliderShowContainer">
             <div class="slider">
                 <div class="main-hello">
+                    {% for home in homes %}
                     <div class="main-text ">
-                        <span class="main-text-hello">Hello!</span>
-                        <h1 class="main-text-about">I'm a <span class="different"> web designer </span>based in London</h1>
+                        <span class="main-text-hello">{{home.title}}</span>
+                        <h1 class="main-text-about">{{home.description}}</h1>
                         <div class="button">
                             <a href="" class="hire-me">Hire Me</a>
                             <a href="" class="my-works">My Works</a>
                         </div>
                     </div>
-                    <img src="{{url_for('static', filename='img/bg_2.png')}}" alt="">
+                    <img src="static/uploads/{{home.image}}" alt=""> {% endfor %}
                 </div>
             </div>
             <div class="slider">
                 <div class="main-hello">
                     <div class="main-text ">
-                        <span class="main-text-hello">Hello!</span>
-                        <h1 class="main-text-about">I'm a <span class="different">Clark Thompson</span></h1>
-                        <h2>A Freelance Web esigner</h2>
+                        <span class="main-text-hello">{{home.title}}</span>
+                        <h1 class="main-text-about">{{home.description}}</h1>
+                        <h2>{{home.short_description}}</h2>
                         <div class="button">
                             <a href="" class="hire-me">Hire Me</a>
                             <a href="" class="my-works">My Works</a>
                         </div>
                     </div>
-                    <img src="{{url_for('static', filename='img/about.png ')}}" alt="">
+                    <img src="static/uploads/{{home.image}}" alt="">
                 </div>
             </div>
 
@@ -456,22 +457,22 @@
                     <div class="row1">
                         <span class="circle"><i class="fas fa-map-signs fa-2x"></i></span>
                         <h3>Address</h3>
-                        <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+                        <p>{{about.adress}}</p>
                     </div>
                     <div class="row2">
                         <span class="circle"><i class="fas fa-phone-alt fa-2x"></i></span>
                         <h3>Contact Number</h3>
-                        <a href="">+ 1235 2355 98</a>
+                        <a href="">{{about.phone}}</a>
                     </div>
                     <div class="row3">
                         <span class="circle"><i class="fab fa-telegram-plane fa-2x"></i></span>
                         <h3>Email Address</h3>
-                        <a href="">info@yoursite.com</a>
+                        <a href="">{{about.email}}</a>
                     </div>
                     <div class="row4">
-                        <span class="circle"><i class="fas fa-globe-americas fa-2x"></i></span>
-                        <h3>WebSite</h3>
-                        <a href="">yoursite.com</a>
+                        <span class="circle"><i class="fas fa-envelope-open-text fa-2x"></i></i></span>
+                        <h3>ZipCode</h3>
+                        <a href="">{{about.zip_code}}</a>
                     </div>
                 </div>
 
@@ -481,23 +482,25 @@
                 <div class="contact-form-image">
                     <img src="{{url_for('static', filename='img/contact.jpg')}}" alt="">
                 </div>
-                <div class="form">
-                    <form action="" class="first">
-                        <input type="text" placeholder="Your Name">
-                    </form>
-                    <form action="">
-                        <input type="text" placeholder="Your Email">
-                    </form>
-                    <form action="">
-                        <input type="text" placeholder="Subject">
-                    </form>
-                    <form action="" class="fourth">
-                        <input type="text" placeholder="Message">
-                    </form>
-                    <form action="" class="last">
-                        <input type="submit" value="Send Message">
-                    </form>
-                </div>
+                <form class="form" method="POST">
+                    {{ form.hidden_tag() }}
+                    <div action="" class="first">
+                        {{ form.name }}
+                    </div>
+
+                    <div action="">
+                        {{ form.email }}
+                    </div>
+                    <div action="" style="margin-top: 15px;">
+                        {{ form.subject }}
+                    </div>
+                    <div action="">
+                        {{ form.content(class="fourth") }}
+                    </div>
+                    <div action="" class="last">
+                        {{ form.submit(class="") }}
+                    </div>
+                </form>
             </div>
 
         </div>
@@ -578,16 +581,16 @@
                     <ul>
                         <p>
                             <i class="fas fa-map-marker-alt"></i>
-                            <li> 203 Fake St. Mountain View, San Francisco, California, USA</li>
+                            <li> {{about.adress}}</li>
                         </p>
                         <a href="">
                             <i class="fas fa-phone-alt"></i>
-                            <li>+2 392 3929 210
+                            <li>{{about.phone}}
                             </li>
                         </a>
                         <a href="">
                             <i class="fas fa-envelope"></i>
-                            <li>info@yourdomain.com</li>
+                            <li>{{about.email}}</li>
                         </a>
                     </ul>
                 </div>

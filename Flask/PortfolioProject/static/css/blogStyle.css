@@ -379,6 +379,7 @@ textarea {
     height: 150px;
     width: 300px;
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 24px;
     position: relative;
 }
@@ -400,7 +401,6 @@ textarea {
 .recent-blog .heading {
     font-size: 18px !important;
     font-weight: 300;
-    margin-bottom: 15px;
     line-height: 1.5;
 }
 
@@ -409,10 +409,8 @@ textarea {
 }
 
 .recent-blog .date {
-    height: 54px;
     width: 198px;
-    position: absolute;
-    bottom: 0px;
+    position: relative;
     left: 105px;
     display: flex;
     flex-wrap: wrap;

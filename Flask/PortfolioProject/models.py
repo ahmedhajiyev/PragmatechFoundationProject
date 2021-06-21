@@ -1,6 +1,21 @@
 from PortfolioProject import db
 from datetime import datetime
 
+
+class Home(db.Model):
+
+    __tablename__ = 'home'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100), nullable=False)
+    description = db.Column(db.Text, nullable=False)
+    short_description = db.Column(db.String(100))
+    image = db.Column(db.String(20), default='uploads/default.jpeg')
+
+    def __repr__(self):
+        return f'Home {self.title}'
+
+
+
 class About(db.Model):
 
     __tablename__= 'about'
@@ -27,6 +42,7 @@ class Blog(db.Model):
     description = db.Column(db.Text, nullable=False)
     image = db.Column(db.String(20), default='uploads/default.jpeg')
     category = db.Column(db.Integer, db.ForeignKey('blogcategory.id'), nullable=False)
+    comments = db.relationship('Comment', backref='host', lazy=True)
 
     def __repr__(self):
         return f'Blog {self.title}'
@@ -44,15 +60,16 @@ class BlogCategory(db.Model):
         return f'Category {self.title}'
 
 
-# class Comment(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     date_writed = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-#     content = db.Column(db.Text, nullable=False)
-#     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-#     post_id = db.Column(db.Integer, db.ForeignKey('post.id'), nullable=False)
+class Comment(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    date_writed = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    content = db.Column(db.Text, nullable=False)
+    user_name = db.Column(db.String(20), nullable=False)
+    email = db.Column(db.String(20), nullable=False)
+    blog_id = db.Column(db.Integer, db.ForeignKey('blog.id'), nullable=False)
 
-#     def __repr__(self):
-#         return f"Comment('{self.content})"
+    def __repr__(self):
+        return f"Comment('{self.content})"
 
 class Resume(db.Model):
 
@@ -64,4 +81,16 @@ class Resume(db.Model):
     description = db.Column(db.Text, nullable=False)
 
     def __repr__(self):
-        return f'Blog {self.title}'
+        return f'Blog {self.date}'
+
+
+class Messages(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    date_writed = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    content = db.Column(db.Text, nullable=False)
+    user_name = db.Column(db.String(20), nullable=False)
+    email = db.Column(db.String(20), nullable=False)
+    subject = db.Column(db.String(20), nullable=False)
+
+    def __repr__(self):
+        return f"Messages('{self.content})"
