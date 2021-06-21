@@ -1,0 +1,48 @@
+{% extends 'admin/base.html' %} {% block content %}
+
+<div style="    position: relative;
+top: 75px;">
+    <h1>Blog Add</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label>About Image:</label>
+            <input type="file" class="form-control" name="file">
+        </div>
+        <div class="form-group">
+            <label>Project Image 1:</label>
+            <input type="file" class="form-control" name="file">
+        </div>
+        <div class="form-group">
+            <label>Project Image 2:</label>
+            <input type="file" class="form-control" name="file">
+        </div>
+        <div class="form-group">
+            <label>Project Image 3:</label>
+            <input type="file" class="form-control" name="file">
+        </div>
+        <div class="form-group">
+            <label>Project Image 4:</label>
+            <input type="file" class="form-control" name="file">
+        </div>
+
+        <div class="form-group">
+            <label>Project Image 5:</label>
+            <input type="file" class="form-control" name="file">
+        </div>
+        <div class="form-group">
+            <label>Project Image 6:</label>
+            <input type="file" class="form-control" name="file">
+        </div>
+        <div class="form-group">
+            <label>Contact Image:</label>
+            <input type="file" class="form-control" name="file">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Add Blog</button>
+        </div>
+    </form>
+    <a href=""><button type="button"  class="btn btn-success float-right"
+    data-toggle="modal">See Blogs</button></a>
+</div>
+{% endblock %}

@@ -84,51 +84,51 @@
         </div>
 
         <div class="single-blog-main">
+            <div class="single-blog-main-container">
+                <div class="row1">
 
-            </form>
-        </div>
-        </div>
-        <div class="row2">
-            <div class="sidebar">
-                <input type="text" placeholder="Type a keyword and hit enter">
-                <i class="fas fa-search"></i>
-            </div>
-            <div class="categories">
-                <h3>Categories</h3>
-                {% for blogcategories in blogcategories %}
-                <li> <a href="">{{blogcategories.title}}</a> <span>(12)</span> </li>
-                {% endfor %}
-            </div>
-            <div class="recent-blog">
-                <h3>Recent Blog</h3>
-                {% for blog in blogs %}
-                <div class="blog1">
-                    <a href="{{url_for('single_blog', id=blog.id)}}" class="image"> <img src="../static/uploads/{{blog.image}}" alt=""></a>
-                    <h3 class="heading"> <a href=""> {{blog.title}}</a></h3>
-                    <div class="date">
-                        <div> <a href="{{url_for('single_blog', id=blog.id)}}"><i class="far fa-calendar-alt"></i>{{blog.date_posted.strftime('%Y-%m-%d')}}</a> </div>
-                        <div> <a href="{{url_for('single_blog', id=blog.id)}}"><i class="fas fa-user-alt"></i>Admin</a> </div>
-                        <div> <a href="{{url_for('single_blog', id=blog.id)}}"><i class="fas fa-comment-alt "></i>19</a> </div>
+                </div>
+                <div class="row2">
+                    <div class="sidebar">
+                        <input type="text" placeholder="Type a keyword and hit enter">
+                        <i class="fas fa-search"></i>
                     </div>
-                </div>
-                {% endfor %}
-            </div>
-            <div class="tag-cloud">
-                <h3>Tag Cloud</h3>
-                <div class="tag">
-                    <a href="">House</a>
-                    <a href="">Office</a>
-                    <a href="">Bulding</a>
-                    <a href="">Land</a>
-                    <a href="">Table</a>
-                    <a href="">Interior</a>
-                    <a href="">Exterior</a>
-                    <a href="">Indistrual</a>
-                </div>
-            </div>
+                    <div class="categories">
+                        <h3>Categories</h3>
+                        {% for blogcategories in blogcategories %}
+                        <li> <a href="">{{blogcategories.title}}</a> <span>(12)</span> </li>
+                        {% endfor %}
+                    </div>
+                    <div class="recent-blog">
+                        <h3>Recent Blog</h3>
+                        {% for blog in blogs %}
+                        <div class="blog1">
+                            <a href="{{url_for('single_blog', id=blog.id)}}" class="image"> <img src="../static/uploads/{{blog.image}}" alt=""></a>
+                            <h3 class="heading"> <a href=""> {{blog.title}}</a></h3>
+                            <div class="date">
+                                <div> <a href="{{url_for('single_blog', id=blog.id)}}"><i class="far fa-calendar-alt"></i>{{blog.date_posted.strftime('%Y-%m-%d')}}</a> </div>
+                                <div> <a href="{{url_for('single_blog', id=blog.id)}}"><i class="fas fa-user-alt"></i>Admin</a> </div>
+                                <div> <a href="{{url_for('single_blog', id=blog.id)}}"><i class="fas fa-comment-alt "></i>19</a> </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="tag-cloud">
+                        <h3>Tag Cloud</h3>
+                        <div class="tag">
+                            <a href="">House</a>
+                            <a href="">Office</a>
+                            <a href="">Bulding</a>
+                            <a href="">Land</a>
+                            <a href="">Table</a>
+                            <a href="">Interior</a>
+                            <a href="">Exterior</a>
+                            <a href="">Indistrual</a>
+                        </div>
+                    </div>
 
-        </div>
-        </div>
+                </div>
+            </div>
         </div>
         </main>
         <footer>

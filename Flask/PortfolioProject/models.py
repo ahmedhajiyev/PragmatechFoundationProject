@@ -26,6 +26,8 @@ class About(db.Model):
     zip_code = db.Column(db.Integer, nullable=False)
     email = db.Column(db.String(100), nullable=False)
     phone = db.Column(db.Integer, nullable=False)
+    image = db.Column(db.String(20), default='uploads/default.jpeg')
+    description = db.Column(db.Text, nullable=False)
 
     def __repr__(self):
         return f'About {self.name}'
@@ -94,3 +96,39 @@ class Messages(db.Model):
 
     def __repr__(self):
         return f"Messages('{self.content})"
+
+class ContactImage(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    image = db.Column(db.String(20), default='uploads/default.jpeg')
+
+class Form(db.Model):
+
+    __tablename__ = 'form'
+    id = db.Column(db.Integer, primary_key=True)
+    about = db.Column(db.Integer, nullable=False)
+    skill_ps = db.Column(db.Integer, nullable=False)
+    skill_html5 = db.Column(db.Integer, nullable=False)
+    skill_wordpress = db.Column(db.Integer, nullable=False)
+    skill_jquerry = db.Column(db.Integer, nullable=False)
+    skill_css = db.Column(db.Integer, nullable=False)
+    skill_seo = db.Column(db.Integer, nullable=False)
+    awards = db.Column(db.Integer, nullable=False)
+    projects = db.Column(db.Integer, nullable=False)
+    customers = db.Column(db.Integer, nullable=False)
+    cups = db.Column(db.Integer, nullable=False)
+    
+
+    def __repr__(self):
+        return f'Blog {self.date}'
+
+
+# class AboutDescription(db.Model):
+
+#     __tablename__= 'about'
+#     id = db.Column(db.Integer, primary_key=True)
+#     name = db.Column(db.String(100), nullable=False)
+#     description = db.Column(db.Text, nullable=False)
+#     image = db.Column(db.String(20), default='uploads/default.jpeg')
+
+#     def __repr__(self):
+#         return f'AboutDescription {self.name}'

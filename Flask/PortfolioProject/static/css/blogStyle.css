@@ -2,7 +2,7 @@
 header {
     background-color: transparent;
     background-image: url(../img/bg_1.jpg);
-    height: 1035px;
+    height: 735px;
     position: relative;
 }
 
@@ -27,7 +27,7 @@ header {
 
 .single-blog .single-blog-container .single-blog-container-text {
     width: 1110px;
-    height: 263px;
+    height: 500px;
     margin: 0 0 16px;
     padding: 0 0 48px;
     position: absolute;
@@ -46,6 +46,7 @@ header {
 .single-blog-container .single-blog-container-text p {
     width: 1110px;
     text-align: center;
+    top: -135px;
 }
 
 .single-blog-container .single-blog-container-text i {
@@ -65,7 +66,6 @@ header {
 
 .single-blog-main .single-blog-main-container {
     width: 1140px;
-    height: 5084px;
     padding: 0 15px;
     margin: 0 auto;
     display: flex;

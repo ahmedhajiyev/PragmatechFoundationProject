@@ -1,0 +1,56 @@
+{% extends 'admin/base.html' %} {% block content %}
+
+
+<div class="container" style="position: relative; top: 50px;">
+    <div class="row">
+        <div class="col md-12">
+            <div class="jumbotron p-3">
+                <h2>Forms
+                    <a href="{{url_for('form')}}"> <button type="button" class="btn btn-dark float-right" data-toggle="modal" data-target="#mymodal">Add</button></a>
+                </h2>
+                <table class="table table-hover table-dark col md-12">
+                    <tr>
+                        <th>ID</th>
+                        <th>About</th>
+                        <th>| Ps</th>
+                        <th>Html5</th>
+                        <th>Wordpress</th>
+                        <th>Jquerry</th>
+                        <th>Css</th>
+                        <th>Seo |</th>
+                        <th>Awards</th>
+                        <th>Projects</th>
+                        <th>Customers</th>
+                        <th>Cups</th>
+                        <th></th>
+                    </tr>
+                    {% for value in value %}
+                    <tr>
+                        <td>{{value.id}}</td>
+                        <td>{{value.about}}</td>
+                        <td>{{value.skill_ps}}</td>
+                        <td>{{value.skill_html5}}</td>
+                        <td>{{value.skill_wordpress}}</td>
+                        <td>{{value.skill_jquerry}}</td>
+                        <td>{{value.skill_css}}</td>
+                        <td>{{value.skill_seo}}</td>
+                        <td>{{value.awards}}</td>
+                        <td>{{value.projects}}</td>
+                        <td>{{value.customers}}</td>
+                        <td>{{value.cups}}</td>
+                        <td>
+
+                            <a href="{{url_for('form_delete', id=value.id)}}" class="btn btn-danger btn-xs mb-1" onclick="return confirm('Are You Sure To Delete?')">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}

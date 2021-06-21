@@ -65,9 +65,9 @@
     </header>
     <main>
         <div class="sliderShowContainer">
+            {% for home in home %}
             <div class="slider">
                 <div class="main-hello">
-                    {% for home in homes %}
                     <div class="main-text ">
                         <span class="main-text-hello">{{home.title}}</span>
                         <h1 class="main-text-about">{{home.description}}</h1>
@@ -76,23 +76,11 @@
                             <a href="" class="my-works">My Works</a>
                         </div>
                     </div>
-                    <img src="static/uploads/{{home.image}}" alt=""> {% endfor %}
+                    <img src="../static/uploads/{{home.image}}" alt="">
                 </div>
             </div>
-            <div class="slider">
-                <div class="main-hello">
-                    <div class="main-text ">
-                        <span class="main-text-hello">{{home.title}}</span>
-                        <h1 class="main-text-about">{{home.description}}</h1>
-                        <h2>{{home.short_description}}</h2>
-                        <div class="button">
-                            <a href="" class="hire-me">Hire Me</a>
-                            <a href="" class="my-works">My Works</a>
-                        </div>
-                    </div>
-                    <img src="static/uploads/{{home.image}}" alt="">
-                </div>
-            </div>
+            {% endfor %}
+
 
 
             <p class="buttons">
@@ -103,7 +91,7 @@
         <!--ABOUT-->
         <div class="about" id="about">
             <div class="about-img ">
-                <img src="{{url_for('static', filename='img/about.png')}}" alt="">
+                <img src="../static/uploads/{{about.image}}" alt="">
             </div>
             <div class="about-me _anim">
                 <div class="about-me-list">
@@ -131,7 +119,8 @@
                 </div>
                 <div class="projectAndDownload">
                     <div class="text">
-                        <span class="number">120 </span>
+
+                        <span class="number">{{value.about}}</span>
                         <span>Project complate</span>
 
                     </div>
@@ -250,44 +239,44 @@
                 <div class="skills-content-row">
                     <div class="row1">
                         <h3>Photoshop</h3>
-                        <p> 90%</p>
                         <span class="border">
-                            <span class="yellow"></span>
+                            <p style="left: {{value.skill_ps}}%;"> {{value.skill_ps}}%</p>
+                            <span class="yellow" style="width: {{value.skill_ps}}%;"></span>
                         </span>
                     </div>
                     <div class="row2">
                         <h3>jQuery</h3>
-                        <p> 85%</p>
+                        <p style="left: {{value.skill_ps}}%;"> {{value.skill_jquerry}}%</p>
                         <span class="border">
-                            <span class="yellow"></span>
+                            <span class="yellow" style="width: {{value.skill_ps}}%;"></span>
                         </span>
                     </div>
                     <div class="row3">
                         <h3>HTML5</h3>
-                        <p> 95%</p>
+                        <p style="left: {{value.skill_html5}}%;"> {{value.skill_html5}}%</p>
                         <span class="border">
-                            <span class="yellow"></span>
+                            <span class="yellow" style="width: {{value.skill_html5}}%;"></span>
                         </span>
                     </div>
                     <div class="row4">
                         <h3>CSS3</h3>
-                        <p> 90%</p>
+                        <p style="left: {{value.skill_css}}%;"> {{value.skill_css}}%</p>
                         <span class="border">
-                            <span class="yellow"></span>
+                            <span class="yellow" style="width: {{value.skill_html5}}%;"></span>
                         </span>
                     </div>
                     <div class="row5">
                         <h3>WordPress</h3>
-                        <p> 70%</p>
+                        <p style="left: {{value.skill_wordpress}}%;"> {{value.skill_wordpress}}%</p>
                         <span class="border">
-                            <span class="yellow"></span>
+                            <span class="yellow" style="width: {{value.skill_wordpress}}%;"></span>
                         </span>
                     </div>
                     <div class="row6">
                         <h3>SEO</h3>
-                        <p> 80%</p>
+                        <p style="left: {{value.skill_seo}}%;"> {{value.skill_seo}}%</p>
                         <span class="border">
-                            <span class="yellow"></span>
+                            <span class="yellow" style="width: {{value.skill_seo}}%;" ></span>
                         </span>
                     </div>
                 </div>
@@ -412,19 +401,19 @@
         <div class="blog-section">
             <div class="blog-section-parts">
                 <div class="row1">
-                    <span>100</span>
+                    <span>{{value.awards}}</span>
                     <p>Awards</p>
                 </div>
                 <div class="row2">
-                    <span>1,200</span>
+                    <span>{{value.projects}}</span>
                     <p>Complete Projects</p>
                 </div>
                 <div class="row3">
-                    <span>1,200</span>
+                    <span>{{value.customers}}</span>
                     <p>Happy Customers</p>
                 </div>
                 <div class="row4">
-                    <span>500</span>
+                    <span>{{value.cups}}</span>
                     <p>Cups of coffee</p>
                 </div>
 
@@ -480,7 +469,8 @@
 
             <div class="contact-form">
                 <div class="contact-form-image">
-                    <img src="{{url_for('static', filename='img/contact.jpg')}}" alt="">
+                    {% for contact in contact %}
+                    <img src="static/uploads/{{contact.image}}" alt=""> {% endfor %}
                 </div>
                 <form class="form" method="POST">
                     {{ form.hidden_tag() }}
@@ -511,7 +501,7 @@
             <div class="footer-container">
                 <div class="row1">
                     <h2>About</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p>{{about.description}}</p>
                     <ul class="social">
                         <a href="" class="twitter">
                             <li><i class="fab fa-twitter "></i></li>

@@ -70,3 +70,21 @@ const animationOnScroll = () => {
 window.addEventListener('scroll', animationOnScroll);
 // Sehife acilanda il section animasiyanin aktivlesmesi
 animationOnScroll();
+
+
+//
+const section = () => {
+    if (window.scrollY >= 0) {
+        let animes = document.querySelector('.about-section-title');
+        animes.classList.add('_active')
+
+    }
+}
+
+section();
+
+window.addEventListener('scroll', function() {
+    let header = document.querySelector(".header");
+    header.style.transition = "all 0.9s ease";
+    header.classList.toggle('navbar-fixed', window.scrollY >= 132);
+})

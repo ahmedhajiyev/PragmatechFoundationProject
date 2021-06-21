@@ -22,6 +22,12 @@
     <div class="row">
         <p>Phone:</p>
     </div>
+    <div class="row">
+        <p>Description:</p>
+    </div>
+    <div class="row">
+        <p>Image:</p>
+    </div>
 
 
     {% for about in abouts %}
@@ -32,6 +38,8 @@
         <p>{{about.zip_code}}</p>
         <p>{{about.email}}</p>
         <p>{{about.phone}}</p>
+        <p>{{about.description}}</p>
+        <p>{{about.image}}</p>
     </div>
     {% endfor%}
     <div class="form-group">

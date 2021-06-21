@@ -1,0 +1,14 @@
+{% extends 'admin/base.html' %} {% block content %}
+<div style="    position: relative;
+top: 75px;">
+    <h1>Image Edit</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+
+        <label>Image:</label>
+        <input type="file" class="form-control" name="file">
+
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Update</button>
+        </div>
+    </form>
+    {% endblock %}
